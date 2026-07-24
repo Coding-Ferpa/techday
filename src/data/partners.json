@@ -1,0 +1,27 @@
+{
+  "title": "Nossos Parceiros",
+  "subtitle": "Empresas e instituições que tornam o Ferpa Tech Day possível",
+  "partners": [
+    {
+      "id": "unifef",
+      "name": "Unifef",
+      "category": "Realização / Apoio Institucional",
+      "description": "Centro Universitário parceiro do evento.",
+      "url": "https://www.unifev.edu.br"
+    },
+    {
+      "id": "ticket-imediato",
+      "name": "Ticket Imediato",
+      "category": "Ticketing & Plataforma",
+      "description": "Plataforma oficial de ingressos do evento.",
+      "url": "https://ticketimediato.com.br"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "category": "Parceiro Global",
+      "description": "A maior plataforma de desenvolvimento de software do mundo.",
+      "url": "https://github.com"
+    }
+  ]
+}

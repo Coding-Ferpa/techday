@@ -1,0 +1,12 @@
+{
+  "eventDate": "24/08",
+  "badge": "2026 by Coding Ferpa",
+  "title": "pré-LOTE",
+  "lotInfo": {
+    "label": "valor do 1ª lote",
+    "untilDate": "até dia 24/08",
+    "price": "R$XX,00"
+  },
+  "ctaText": "<Inscrições no link da bio (ferpatechday) ou pelo site www.codingferpa.com.br_>",
+  "ticketUrl": "https://codingferpa.org"
+}

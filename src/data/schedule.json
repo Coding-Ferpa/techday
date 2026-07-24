@@ -1,0 +1,46 @@
+{
+  "title": "Programação do Evento",
+  "date": "24/08",
+  "schedule": [
+    {
+      "id": "1",
+      "time": "08:00",
+      "title": "Credenciamento e Abertura",
+      "speaker": "Organização Ferpa Tech Day",
+      "type": "opening",
+      "description": "Boas-vindas, entrega de crachás e abertura oficial do evento."
+    },
+    {
+      "id": "2",
+      "time": "09:00",
+      "title": "Palestra de Abertura: O Futuro da Tecnologia",
+      "speaker": "Palestrante Convidado",
+      "type": "talk",
+      "description": "Tendências da indústria de software, IA e mercado de trabalho."
+    },
+    {
+      "id": "3",
+      "time": "10:30",
+      "title": "Coffee Break & Networking",
+      "speaker": "Todos",
+      "type": "break",
+      "description": "Pausa para café, troca de ideias e conexão com os parceiros."
+    },
+    {
+      "id": "4",
+      "time": "11:15",
+      "title": "Desenvolvimento Moderno na Prática",
+      "speaker": "Palestrante Convidado",
+      "type": "talk",
+      "description": "Construindo aplicações de alto desempenho e arquiteturas escaláveis."
+    },
+    {
+      "id": "5",
+      "time": "12:30",
+      "title": "Encerramento e Sorteios",
+      "speaker": "Organização Ferpa Tech Day",
+      "type": "closing",
+      "description": "Agradecimentos, sorteio de brindes e networking final."
+    }
+  ]
+}

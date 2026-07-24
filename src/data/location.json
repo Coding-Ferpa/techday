@@ -1,0 +1,12 @@
+{
+  "title": "Local do Evento",
+  "venue": {
+    "name": "Unifef",
+    "address": "Campus Universitário",
+    "neighborhood": "Fernandópolis — SP",
+    "city": "Fernandópolis",
+    "zip": "15600-000",
+    "mapsUrl": "https://maps.google.com/?q=Unifef+Fernandopolis",
+    "details": "O evento será realizado no auditório principal da Unifef. Contamos com estacionamento e estrutura completa para receber todos os participantes."
+  }
+}

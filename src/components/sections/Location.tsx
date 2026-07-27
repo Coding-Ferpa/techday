@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot, faBuildingColumns } from "@fortawesome/free-solid-svg-icons";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -26,37 +27,42 @@ export default function Location() {
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
-            <div className="rounded-xl border border-accent/30 bg-bg-surface/90 backdrop-blur-md p-8 shadow-lg flex flex-col justify-between">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 rounded-lg bg-accent/10 text-accent">
-                  <FontAwesomeIcon icon={faBuildingColumns} className="w-6 h-6" aria-hidden />
-                </div>
-                <span className="px-3 py-1 rounded-full bg-accent/10 text-accent text-caption font-semibold font-mono">
-                  Sede Oficial
-                </span>
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded-xl border border-accent/30 bg-bg-surface/90 backdrop-blur-md shadow-lg">
+              <div className="relative aspect-[16/7] w-full">
+                <Image
+                  src="/assets/local.jpg"
+                  alt="Campus da Unifef em Fernandópolis"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg-surface/70 to-transparent" />
               </div>
 
-              <h3 className="text-heading-2 font-bold text-text-primary mb-3">
-                {venue.name}
-              </h3>
-              <address className="not-italic text-text-secondary text-body mb-8 leading-relaxed">
-                {venue.address}
-                <br />
-                {venue.neighborhood}
-                <br />
-                {venue.city} — CEP: {venue.zip}
-              </address>
+              <div className="p-6">
 
-              <Button
-                href={venue.mapsUrl}
-                external
-                variant="secondary"
-                icon={faMapLocationDot}
-                className="w-full sm:w-auto"
-                ariaLabel={`Como chegar a ${venue.name} no Google Maps`}
-              >
-                Como chegar
-              </Button>
+                <h3 className="text-heading-3 font-bold text-text-primary mb-2">
+                  {venue.name}
+                </h3>
+                <address className="not-italic text-text-secondary text-caption mb-5 leading-relaxed">
+                  {venue.address}
+                  <br />
+                  {venue.neighborhood}
+                  <br />
+                  {venue.city} — CEP: {venue.zip}
+                </address>
+
+                <Button
+                  href={venue.mapsUrl}
+                  external
+                  variant="secondary"
+                  icon={faMapLocationDot}
+                  className="w-full sm:w-auto px-4 py-2 text-caption"
+                  ariaLabel={`Como chegar a ${venue.name} no Google Maps`}
+                >
+                  Como chegar
+                </Button>
+              </div>
             </div>
           </ScrollReveal>
         </div>

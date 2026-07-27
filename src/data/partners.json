@@ -1,28 +1,31 @@
 {
-  "title": "Nossos Parceiros",
-  "subtitle": "Empresas e instituições que tornam o Ferpa Tech Day possível",
+  "title": "Parceiros que fazem acontecer",
+  "subtitle": "Marcas e instituições que investem no ecossistema de tecnologia de Fernandópolis e região.",
   "partners": [
     {
       "id": "unifef",
       "name": "Unifef",
-      "category": "Realização / Apoio Institucional",
-      "description": "Centro Universitário parceiro do evento.",
+      "type": "partner",
+      "category": "Apoio institucional",
+      "description": "Centro Universitário parceiro e sede do Ferpa Tech Day.",
       "url": "https://unifef.edu.br/",
-      "logo": "/assets/unifef.png"
+      "logo": "/assets/unifef.jpg"
     },
     {
       "id": "ticket-imediato",
       "name": "Ticket Imediato",
-      "category": "Ticketing & Plataforma",
-      "description": "Plataforma oficial de ingressos do evento.",
-      "url": "https://ticketimediato.com/",
+      "type": "partner",
+      "category": "Plataforma oficial",
+      "description": "Experiência segura e simples para a venda oficial dos ingressos.",
+      "url": "https://ticketimediato.com/product/details/ferpa-tech-day-2026.html?productId=12117",
       "logo": "/assets/ticketimediato.png"
     },
     {
       "id": "github",
       "name": "GitHub",
-      "category": "Parceiro Global",
-      "description": "A maior plataforma de desenvolvimento de software do mundo.",
+      "type": "sponsor",
+      "category": "Tecnologia",
+      "description": "Plataforma que conecta e impulsiona a comunidade global de desenvolvimento.",
       "url": "https://github.com/",
       "logo": "/assets/github.png"
     }

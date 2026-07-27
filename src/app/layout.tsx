@@ -23,33 +23,36 @@ const spriteGraffitiFallback = Sedgwick_Ave_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Ferpa Tech Day",
-  description: "Evento de tecnologia para jovens em Fernandópolis",
+  title: "Ferpa Tech Day 2026 | Tecnologia em Fernandópolis",
+  description:
+    "Um dia de palestras, experiências e conexões para a comunidade de tecnologia de Fernandópolis e região.",
   metadataBase: new URL("https://codingferpa.org"),
   openGraph: {
-    title: "Ferpa Tech Day",
-    description: "Evento de tecnologia para jovens em Fernandópolis",
+    title: "Ferpa Tech Day 2026",
+    description:
+      "24 de outubro em Fernandópolis: tecnologia, comunidade e conexões.",
     url: "https://codingferpa.org",
     siteName: "Ferpa Tech Day",
     locale: "pt_BR",
     type: "website",
     images: [
       {
-        url: "/assets/logo-fundo-roxo.png",
-        width: 1200,
-        height: 630,
+        url: "/assets/logo-site.png",
+        width: 1000,
+        height: 500,
         alt: "Ferpa Tech Day",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ferpa Tech Day",
-    description: "Evento de tecnologia para jovens em Fernandópolis",
-    images: ["/assets/logo-fundo-roxo.png"],
+    title: "Ferpa Tech Day 2026",
+    description:
+      "24 de outubro em Fernandópolis: tecnologia, comunidade e conexões.",
+    images: ["/assets/logo-site.png"],
   },
   icons: {
-    icon: [{ url: "/assets/icone-insta.png", sizes: "16x16", type: "image/png" }],
+    icon: [{ url: "/assets/logo-site.png", type: "image/png" }],
   },
 };
 

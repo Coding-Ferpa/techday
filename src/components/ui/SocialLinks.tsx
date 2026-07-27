@@ -1,15 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faDiscord,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { SOCIAL_LINKS } from "@/lib/constants";
 
 const ICON_MAP = {
   Instagram: faInstagram,
-  Discord: faDiscord,
-  Github: faGithub,
 } as const;
 
 interface SocialLinksProps {

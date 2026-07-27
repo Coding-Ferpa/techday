@@ -2,7 +2,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { PARTNERSHIP_EMAIL } from "@/lib/constants";
 
 export default function PartnerCTA() {
   return (
@@ -26,17 +26,21 @@ export default function PartnerCTA() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0 z-10 w-full md:w-auto">
+            <div className="flex flex-col gap-3 shrink-0 z-10 w-full md:w-auto items-center md:items-end">
               <Button
-                href={WHATSAPP_URL}
-                external
+                href={`mailto:${PARTNERSHIP_EMAIL}`}
                 variant="primary"
                 className="w-full sm:w-auto text-center justify-center py-3.5 px-6"
-                ariaLabel="Falar com a organização para parcerias"
+                ariaLabel="Enviar e-mail para parcerias"
               >
                 <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4 mr-2" />
                 Quero ser Parceiro
               </Button>
+              <a
+                href={`mailto:${PARTNERSHIP_EMAIL}`}
+                className="font-mono text-caption text-accent hover:text-accent-muted transition-colors"
+              >
+              </a>
             </div>
           </div>
         </ScrollReveal>

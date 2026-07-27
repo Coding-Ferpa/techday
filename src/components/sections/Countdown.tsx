@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const EVENT_DATE = new Date("2026-08-24T08:00:00-03:00").getTime();
+const EVENT_DATE = new Date("2026-10-24T08:00:00-03:00").getTime();
 
 interface TimeLeft {
   days: number;

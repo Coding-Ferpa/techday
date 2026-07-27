@@ -3,70 +3,137 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import partnersData from "@/data/partners.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare, faHandshake } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faHandshake,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+
+type Partner = (typeof partnersData.partners)[number];
+
+function PartnerCard({
+  partner,
+  featured = false,
+}: {
+  partner: Partner;
+  featured?: boolean;
+}) {
+  const logoClasses = {
+    github: "h-14 w-14 object-contain",
+    unifef: "h-20 w-20 rounded-lg object-cover",
+    "ticket-imediato": "h-12 w-auto max-w-full object-contain",
+  }[partner.id];
+
+  return (
+    <article
+      className={`relative h-full overflow-hidden rounded-2xl border bg-bg-surface/80 backdrop-blur-sm transition-all duration-base hover:-translate-y-1 hover:shadow-glow group flex flex-col ${
+        featured
+          ? "border-accent/40 hover:border-accent p-4"
+          : "border-border hover:border-accent/50 p-5"
+      }`}
+    >
+      <div>
+        <div className="flex items-center justify-between gap-4 mb-4">
+          <span className="px-3 py-1 rounded-full text-caption font-mono font-medium bg-accent/10 text-accent border border-accent/20">
+            {partner.category}
+          </span>
+          <FontAwesomeIcon
+            icon={featured ? faStar : faHandshake}
+            className="w-5 h-5 text-text-muted group-hover:text-accent transition-colors"
+            aria-hidden
+          />
+        </div>
+
+        <div className="relative mb-4 flex h-20 items-center justify-center px-3">
+          <Image
+            src={partner.logo}
+            alt={`Logo ${partner.name}`}
+            width={320}
+            height={180}
+            className={logoClasses}
+          />
+        </div>
+
+        <h3 className="mb-2 text-center text-lg font-bold text-text-primary">
+          {partner.name}
+        </h3>
+
+        <p className="text-caption text-text-secondary leading-relaxed mb-5">
+          {partner.description}
+        </p>
+      </div>
+
+      <a
+        href={partner.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 text-caption font-semibold text-accent hover:text-accent-muted transition-colors mt-auto"
+        aria-label={`Conhecer ${partner.name}`}
+      >
+        <span>Conhecer {featured ? "patrocinador" : "parceiro"}</span>
+        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3.5 h-3.5" aria-hidden />
+      </a>
+    </article>
+  );
+}
 
 export default function Partners() {
+  const sponsors = partnersData.partners.filter(
+    (partner) => partner.type === "sponsor",
+  );
+  const partners = partnersData.partners.filter(
+    (partner) => partner.type === "partner",
+  );
+
   return (
-    <section id="partners" className="py-16 md:py-24 bg-bg-elevated/30">
+    <section id="partners" className="relative overflow-hidden py-16 md:py-24 bg-bg-elevated/30">
+      <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
       <div className="max-w-container mx-auto px-6 lg:px-10">
         <ScrollReveal>
           <SectionHeading
-            label="Apoio & Parcerias"
+            label="Patrocínio & apoio"
             title={partnersData.title}
             align="center"
             className="mb-4"
           />
-          <p className="text-body text-text-secondary text-center max-w-xl mx-auto mb-12">
+          <p className="text-body text-text-secondary text-center max-w-2xl mx-auto mb-12">
             {partnersData.subtitle}
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {partnersData.partners.map((partner, index) => (
-            <ScrollReveal key={partner.id} delay={index * 100}>
-              <div className="h-full rounded-xl border border-border bg-bg-surface/80 backdrop-blur-sm p-8 flex flex-col justify-between hover:border-accent/40 transition-all duration-base group">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 rounded-full text-caption font-mono font-medium bg-accent/10 text-accent border border-accent/20">
-                      {partner.category}
-                    </span>
-                    {/* @ts-ignore - Ignore missing type in json for now */}
-                    {partner.logo ? (
-                      <div className="w-10 h-10 relative bg-white/10 rounded-md flex items-center justify-center overflow-hidden p-1">
-                        <Image
-                          src={partner.logo}
-                          alt={partner.name}
-                          fill
-                          className="object-contain p-1"
-                        />
-                      </div>
-                    ) : (
-                      <FontAwesomeIcon icon={faHandshake} className="w-5 h-5 text-text-muted group-hover:text-accent transition-colors" />
-                    )}
-                  </div>
-                  <h3 className="text-heading-2 font-bold text-text-primary mb-3">
-                    {partner.name}
-                  </h3>
-                  <p className="text-body text-text-secondary leading-relaxed mb-6">
-                    {partner.description}
-                  </p>
-                </div>
+        <div className="space-y-12">
+          <div>
+            <h3 className="mb-5 text-center font-mono text-caption uppercase tracking-[0.2em] text-accent">
+              Patrocinador
+            </h3>
+            <div className="mx-auto max-w-xs">
+              {sponsors.map((partner, index) => (
+                <ScrollReveal key={partner.id} delay={index * 100}>
+                  <PartnerCard partner={partner} featured />
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
 
-                {partner.url && (
-                  <a
-                    href={partner.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-caption font-semibold text-accent hover:text-accent-muted transition-colors mt-auto"
-                  >
-                    <span>Visitar parceiro</span>
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3.5 h-3.5" aria-hidden />
-                  </a>
-                )}
-              </div>
-            </ScrollReveal>
-          ))}
+          <div>
+            <h3 className="mb-5 text-center font-mono text-caption uppercase tracking-[0.2em] text-text-muted">
+              Parceiros
+            </h3>
+            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-5 md:grid-cols-2">
+              {partners.map((partner, index) => (
+                <ScrollReveal key={partner.id} delay={index * 100}>
+                  <PartnerCard partner={partner} />
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
         </div>
+
+        <ScrollReveal delay={300}>
+          <p className="mt-10 text-center font-mono text-caption text-text-muted">
+            Sua marca também pode fazer parte deste movimento.
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

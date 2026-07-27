@@ -16,15 +16,11 @@
     font-family: var(--font-body);
     background-color: #050505;
     background-image: 
+      url('/assets/textura.png'),
       radial-gradient(circle at 0% 90%, rgba(81, 207, 145, 0.4) 0%, transparent 55%),
-      radial-gradient(circle at 100% 35%, rgba(94, 23, 235, 0.5) 0%, transparent 60%),
-      repeating-linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.025) 0px,
-        rgba(255, 255, 255, 0.025) 1px,
-        transparent 1px,
-        transparent 3px
-      );
+      radial-gradient(circle at 100% 35%, rgba(94, 23, 235, 0.5) 0%, transparent 60%);
+    background-size: cover, auto, auto;
+    background-blend-mode: overlay, normal, normal;
     background-attachment: fixed;
     color: var(--color-text-primary);
     -webkit-font-smoothing: antialiased;

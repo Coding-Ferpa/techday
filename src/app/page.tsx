@@ -1,17 +1,21 @@
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
+import Countdown from "@/components/sections/Countdown";
 import Schedule from "@/components/sections/Schedule";
 import Location from "@/components/sections/Location";
 import Partners from "@/components/sections/Partners";
+import PartnerCTA from "@/components/sections/PartnerCTA";
+import About from "@/components/sections/About";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <About />
+      <Countdown />
       <Schedule />
       <Location />
       <Partners />
+      <PartnerCTA />
+      <About />
     </>
   );
 }

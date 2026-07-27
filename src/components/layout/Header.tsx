@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/components/ui/Button";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
-import icon from "@/app/assets/icon.png";
-
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +40,7 @@ export default function Header() {
           aria-label="Ferpa Tech Day — página inicial"
         >
           <Image
-            src={icon}
+            src="/assets/logo-fundo-roxo.png"
             alt="Logo Ferpa Tech Day"
             width={40}
             height={40}
@@ -82,7 +80,7 @@ export default function Header() {
             className="hidden sm:inline-flex text-caption px-4 py-2"
             ariaLabel="Participe — entrar no grupo do WhatsApp"
           >
-            Participe
+            Garantir Ingressos
           </Button>
 
           <button
@@ -130,7 +128,7 @@ export default function Header() {
             className="mt-3 w-full"
             ariaLabel="Participe — entrar no grupo do WhatsApp"
           >
-            Participe
+            Garantir Ingressos
           </Button>
         </nav>
       )}

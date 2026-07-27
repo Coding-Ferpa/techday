@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import partnersData from "@/data/partners.json";
@@ -29,7 +30,19 @@ export default function Partners() {
                     <span className="px-3 py-1 rounded-full text-caption font-mono font-medium bg-accent/10 text-accent border border-accent/20">
                       {partner.category}
                     </span>
-                    <FontAwesomeIcon icon={faHandshake} className="w-5 h-5 text-text-muted group-hover:text-accent transition-colors" />
+                    {/* @ts-ignore - Ignore missing type in json for now */}
+                    {partner.logo ? (
+                      <div className="w-10 h-10 relative bg-white/10 rounded-md flex items-center justify-center overflow-hidden p-1">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          fill
+                          className="object-contain p-1"
+                        />
+                      </div>
+                    ) : (
+                      <FontAwesomeIcon icon={faHandshake} className="w-5 h-5 text-text-muted group-hover:text-accent transition-colors" />
+                    )}
                   </div>
                   <h3 className="text-heading-2 font-bold text-text-primary mb-3">
                     {partner.name}

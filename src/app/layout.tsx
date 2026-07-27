@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/assets/logo.png",
+        url: "/assets/logo-fundo-roxo.png",
         width: 1200,
         height: 630,
         alt: "Ferpa Tech Day",
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ferpa Tech Day",
     description: "Evento de tecnologia para jovens em Fernandópolis",
-    images: ["/assets/logo.png"],
+    images: ["/assets/logo-fundo-roxo.png"],
   },
   icons: {
-    icon: [{ url: "/assets/icon.png", sizes: "16x16", type: "image/png" }],
+    icon: [{ url: "/assets/icone-insta.png", sizes: "16x16", type: "image/png" }],
   },
 };
 

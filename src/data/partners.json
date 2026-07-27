@@ -7,21 +7,24 @@
       "name": "Unifef",
       "category": "Realização / Apoio Institucional",
       "description": "Centro Universitário parceiro do evento.",
-      "url": "https://www.unifev.edu.br"
+      "url": "https://unifef.edu.br/",
+      "logo": "/assets/unifef.png"
     },
     {
       "id": "ticket-imediato",
       "name": "Ticket Imediato",
       "category": "Ticketing & Plataforma",
       "description": "Plataforma oficial de ingressos do evento.",
-      "url": "https://ticketimediato.com.br"
+      "url": "https://ticketimediato.com/",
+      "logo": "/assets/ticketimediato.png"
     },
     {
       "id": "github",
       "name": "GitHub",
       "category": "Parceiro Global",
       "description": "A maior plataforma de desenvolvimento de software do mundo.",
-      "url": "https://github.com"
+      "url": "https://github.com/",
+      "logo": "/assets/github.png"
     }
   ]
 }

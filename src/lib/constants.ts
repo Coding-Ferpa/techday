@@ -9,7 +9,7 @@ export const MAPS_URL =
 export const SOCIAL_LINKS = [
   {
     name: "Instagram",
-    url: "https://instagram.com/codingferpa",
+    url: "https://instagram.com/techdayferpa",
     label: "Instagram da Ferpa Tech Day",
   },
   {
@@ -26,10 +26,10 @@ export const SOCIAL_LINKS = [
 
 export const NAV_LINKS = [
   { label: "Início", href: "#home" },
-  { label: "Quem Somos", href: "#about" },
   { label: "Programação", href: "#schedule" },
   { label: "Local", href: "#location" },
   { label: "Parceiros", href: "#partners" },
+  { label: "Quem Somos", href: "#about" },
 ] as const;
 
 export const VENUE = {

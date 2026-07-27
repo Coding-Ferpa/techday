@@ -1,105 +1,87 @@
-# Ferpa Tech Day
+# 🚀 Ferpa Tech Day — Website Oficial
 
-Site do [Ferpa Tech Day](https://codingferpa.org/), evento de tecnologia em Fernandópolis — SP.
+> **Além do código**: O evento de tecnologia da comunidade **Coding Ferpa** em Fernandópolis — SP.
 
-**Slogan:** Além do código
+Este repositório contém o código-fonte do portal oficial do **Ferpa Tech Day**, um evento voltado para a democratização do conhecimento, conexão entre estudantes, profissionais e entusiastas de tecnologia, e o fortalecimento do ecossistema de inovação regional.
 
-## Stack
+---
 
-- [Next.js 14](https://nextjs.org/) (App Router)
-- [React 18](https://react.dev/)
-- [Tailwind CSS 3](https://tailwindcss.com/)
-- [Font Awesome](https://fontawesome.com/) (ícones)
-- TypeScript
+## 📌 Sobre o Projeto
 
-## Desenvolvimento
+O portal do **Ferpa Tech Day** foi desenvolvido para apresentar todas as informações sobre o evento de forma moderna, intuitiva e acessível em qualquer dispositivo.
 
-```bash
-npm install
-npm run dev
-```
+Nele, os participantes e parceiros encontram:
 
-Acesse [http://localhost:3000](http://localhost:3000).
+- 📅 **Programação do Evento**: Cronograma de palestras, abertura e momentos de networking.
+- 📍 **Localização e Ingressos**: Informações de acesso ao local e direcionamento para inscrição.
+- 🤝 **Parceiros e Patrocinadores**: Espaço dedicado aos apoiadores que tornam a iniciativa possível.
+- 📜 **Código de Conduta**: Nossos princípios de convivência, diversidade e inclusão.
 
-```bash
-npm run build   # build de produção
-npm run lint    # lint
-```
+---
 
-## Estrutura de componentes
+## 🤝 Como Contribuir
 
-```
-src/
-├── app/                        # Rotas e layout Next.js
-│   ├── layout.tsx              # Layout raiz, metadata OG/Twitter
-│   ├── page.tsx                # Landing page
-│   ├── globals.css             # Estilos globais + utilitários
-│   └── CODE_OF_CONDUCT/        # Página do código de conduta
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx          # Navbar fixa com blur, âncoras e menu mobile
-│   │   └── Footer.tsx          # Rodapé com navegação, redes e créditos
-│   ├── sections/
-│   │   ├── Hero.tsx            # Hero com slogan, CTA e foto da comunidade
-│   │   ├── About.tsx           # Quem Somos com pills de valores
-│   │   ├── Events.tsx          # Encontros com card do local e CTA WhatsApp
-│   │   └── Talks.tsx           # Grid de palestras (dados de cards.json)
-│   └── ui/
-│       ├── Button.tsx          # Botão reutilizável (primary, secondary, whatsapp)
-│       ├── SectionHeading.tsx  # Título de seção com label opcional
-│       ├── ScrollReveal.tsx    # Animação de entrada via IntersectionObserver
-│       ├── SocialLinks.tsx     # Ícones de redes sociais estilizados
-│       ├── TalkCard.tsx        # Card de palestra com avatar/inicial
-│       ├── ValuePill.tsx       # Pill visual para valores da comunidade
-│       └── EmptyState.tsx      # Estado vazio para palestras
-├── lib/
-│   └── constants.ts            # URLs externas e dados estáticos centralizados
-└── styles/
-    └── tokens.css              # Design tokens (cores, tipografia, espaçamento)
-```
+Este é um **projeto aberto para a comunidade**! Toda contribuição é bem-vinda, seja corrigindo um detalhe no layout, sugerindo melhorias de acessibilidade, adicionando novos recursos ou aprimorando a documentação.
 
-## Design System
+### Formas de Contribuir
 
-Tokens centralizados em `src/styles/tokens.css`:
+- 🐛 **Relatar problemas ou sugerir ideias**: Abra uma [Issue](https://github.com/codingferpa/techday/issues) descrevendo o ajuste ou a melhoria.
+- 🎨 **Melhorias de Design e UI/UX**: Ajustes de responsividade, tipografia, cores e suporte a telas móveis.
+- 📝 **Conteúdo e Documentação**: Correções gramaticais, atualização de textos ou ajustes de documentação.
+- 💻 **Código e Performance**: Otimização de componentes, acessibilidade e novas funcionalidades.
 
-| Categoria | Exemplos |
-|-----------|----------|
-| Cores | `--color-bg-primary` (#0d0d0d), `--color-accent` (#7c3aed), `--color-accent-secondary` (#22d3ee) |
-| Tipografia | `--text-heading-1` a `--text-caption` |
-| Espaçamento | Múltiplos de 8px (`--space-1` a `--space-7`) |
-| Efeitos | `--shadow-glow`, `--radius-lg`, `--transition-base` |
+### Passo a Passo para Enviar uma Contribuição
 
-O tema é **dark nativo** com paleta violeta/ciano. Animações respeitam `prefers-reduced-motion`.
+1. Faça um **Fork** deste repositório para a sua conta no GitHub.
+2. Crie uma **branch** para a sua alteração:
+   ```bash
+   git checkout -b minha-contribuicao
+   ```
+3. Faça os **commits** com mensagens claras:
+   ```bash
+   git commit -m "feat: melhora a responsividade da agenda em dispositivos móveis"
+   ```
+4. Envie as alterações para o seu fork:
+   ```bash
+   git push origin minha-contribuicao
+   ```
+5. Abra um **Pull Request (PR)** descrevendo o que foi feito.
 
-## Seções da landing page
+> ℹ️ Por favor, siga nosso [Código de Conduta](CODE_OF_CONDUCT.md) ao participar de qualquer espaço da comunidade.
 
-1. **Header** — Navbar fixa com links âncora e botão "Participe" (WhatsApp)
-2. **Hero** — Logo, slogan "Além do código", CTA, redes sociais e foto da comunidade
-3. **Quem Somos** — Missão, valores (Democratizar, Conectar, Crescer) e foto de evento
-4. **Nossos Encontros** — Card do Dog King, badge mensal, botão Maps e CTA WhatsApp
-5. **Palestras** — Grid de cards dinâmicos a partir de `src/app/assets/cards.json`
-6. **Footer** — Navegação, redes sociais, código de conduta e crédito da comunidade
+---
 
-## Palestras
+## 🛠️ Executando o Projeto Localmente
 
-Edite `src/app/assets/cards.json` para atualizar o título da agenda e as palestras:
+Para rodar o projeto em seu ambiente de desenvolvimento:
 
-```json
-{
-  "title": "Palestras do dia 21/08",
-  "talks": [
-    {
-      "id": 1,
-      "title": "Título da palestra",
-      "speaker": "Nome do palestrante",
-      "description": "Descrição da palestra"
-    }
-  ]
-}
-```
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/codingferpa/techday.git
+   cd techday
+   ```
 
-Quando `talks` estiver vazio, a seção exibe um estado vazio estilizado.
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-## Deploy
+3. **Execute o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-O site é deployado via GitHub Pages (workflow em `.github/workflows/nextjs.yml`).
+4. Abra `http://localhost:3000` no seu navegador.
+
+---
+
+## 🌐 Comunidade Coding Ferpa
+
+O **Ferpa Tech Day** é organizado pela comunidade **Coding Ferpa**. Nosso propósito é conectar pessoas e impulsionar a tecnologia em Fernandópolis e região.
+
+- 🌐 **Website**: [codingferpa.org](https://codingferpa.org/)
+- 📧 **Contato**: [codingferpa@gmail.com](mailto:codingferpa@gmail.com)
+
+---
+
+<p align="center">Feito com 💜 pela comunidade <strong>Coding Ferpa</strong></p>

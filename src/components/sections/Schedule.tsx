@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import PageContainer from "@/components/layout/PageContainer";
 import scheduleData from "@/data/schedule.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faMugHot, faMicrophone, faFlagCheckered, faTicket } from "@fortawesome/free-solid-svg-icons";
@@ -19,8 +20,8 @@ export default function Schedule() {
   };
 
   return (
-    <section id="schedule" className="py-16 md:py-24">
-      <div className="max-w-container mx-auto px-6 lg:px-10">
+    <section id="schedule" className="section-shell">
+      <PageContainer>
         <ScrollReveal>
           <SectionHeading
             label={`Evento ${scheduleData.date}`}
@@ -31,7 +32,7 @@ export default function Schedule() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="max-w-5xl mx-auto overflow-hidden rounded-2xl border border-border bg-bg-elevated/70 shadow-xl backdrop-blur-sm">
+          <div className="mx-[calc(-1*var(--container-padding-inline))] sm:mx-auto max-w-none sm:max-w-5xl overflow-hidden rounded-none sm:rounded-2xl border-y sm:border border-border bg-bg-elevated/70 shadow-xl backdrop-blur-sm">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[720px] border-collapse text-left">
                 <caption className="sr-only">
@@ -39,9 +40,9 @@ export default function Schedule() {
                 </caption>
                 <thead>
                   <tr className="border-b border-border bg-bg-surface/80 font-mono text-xs uppercase tracking-widest text-text-muted">
-                    <th scope="col" className="w-36 px-6 py-4 font-medium">Horário</th>
-                    <th scope="col" className="px-6 py-4 font-medium">Atividade</th>
-                    <th scope="col" className="w-64 px-6 py-4 font-medium">Responsável</th>
+                    <th scope="col" className="w-28 sm:w-36 px-3 sm:px-6 py-4 font-medium">Horário</th>
+                    <th scope="col" className="px-3 sm:px-6 py-4 font-medium">Atividade</th>
+                    <th scope="col" className="w-48 sm:w-64 px-3 sm:px-6 py-4 font-medium">Responsável</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -52,13 +53,13 @@ export default function Schedule() {
                         item.type === "break" ? "bg-accent/[0.06]" : ""
                       }`}
                     >
-                      <th scope="row" className="px-6 py-6 align-top">
+                      <th scope="row" className="px-3 sm:px-6 py-4 sm:py-6 align-top">
                         <span className="inline-flex items-center gap-2 font-mono text-base font-bold text-accent">
                           <FontAwesomeIcon icon={faClock} className="w-4 h-4" aria-hidden />
                           {item.time}
                         </span>
                       </th>
-                      <td className="px-6 py-6">
+                      <td className="px-3 sm:px-6 py-4 sm:py-6">
                         <div className="flex items-start gap-4">
                           <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                             <FontAwesomeIcon icon={getIcon(item.type)} className="w-4 h-4" aria-hidden />
@@ -80,7 +81,7 @@ export default function Schedule() {
                           </div>
                         </div>
                       </td>
-                      <td className="px-6 py-6 align-top text-caption font-medium text-accent-muted">
+                      <td className="px-3 sm:px-6 py-4 sm:py-6 align-top text-caption font-medium text-accent-muted">
                         {item.speaker}
                       </td>
                     </tr>
@@ -88,7 +89,7 @@ export default function Schedule() {
                 </tbody>
               </table>
             </div>
-            <p className="border-t border-border bg-bg-surface/40 px-6 py-3 text-center font-mono text-xs text-text-muted md:hidden">
+            <p className="border-t border-border bg-bg-surface/40 px-page py-3 text-center font-mono text-xs text-text-muted md:hidden">
               Deslize para o lado para ver todos os detalhes
             </p>
           </div>
@@ -96,7 +97,7 @@ export default function Schedule() {
             * O cronograma está sujeito a alterações.
           </p>
         </ScrollReveal>
-      </div>
+      </PageContainer>
     </section>
   );
 }

@@ -15,6 +15,7 @@ export const SOCIAL_LINKS = [
   {
     name: "Instagram",
     url: "https://instagram.com/ferpatechday",
+    handle: "@ferpatechday",
     label: "Instagram da Ferpa Tech Day",
   },
 ] as const;

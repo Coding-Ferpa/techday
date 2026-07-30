@@ -42,6 +42,33 @@
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
+
+  .menu-toggle:focus,
+  .menu-toggle:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@layer components {
+  .page-container {
+    width: 100%;
+    max-width: 96rem;
+    margin-inline: auto;
+    padding-inline: max(
+        var(--container-padding-inline),
+        env(safe-area-inset-left, 0px)
+      )
+      max(var(--container-padding-inline), env(safe-area-inset-right, 0px));
+  }
+
+  .section-shell {
+    @apply py-14 md:py-24;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-border bg-bg-elevated/80 backdrop-blur-sm shadow-lg;
+  }
 }
 
 @layer utilities {
@@ -96,6 +123,17 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  @keyframes mobileNavItem {
+    from {
+      opacity: 0;
+      transform: translateX(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -107,5 +145,9 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  [class*="animate-[mobileNavItem"] {
+    animation: none !important;
   }
 }

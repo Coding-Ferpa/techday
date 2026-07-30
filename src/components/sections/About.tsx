@@ -7,12 +7,13 @@ import {
 import SectionHeading from "@/components/ui/SectionHeading";
 import ValuePill from "@/components/ui/ValuePill";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import PageContainer from "@/components/layout/PageContainer";
 import communityPhoto from "@/app/assets/evento.jpeg";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24">
-      <div className="max-w-container mx-auto px-6 lg:px-10">
+    <section id="about" className="section-shell">
+      <PageContainer>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
           <ScrollReveal>
             <div>
@@ -59,7 +60,7 @@ export default function About() {
             </div>
           </ScrollReveal>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 }

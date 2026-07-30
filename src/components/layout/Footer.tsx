@@ -2,16 +2,17 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import SocialLinks from "@/components/ui/SocialLinks";
+import PageContainer from "@/components/layout/PageContainer";
 import { NAV_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-elevated border-t border-border mt-6">
-      <div className="max-w-container mx-auto px-6 lg:px-10 py-8">
+    <footer className="bg-bg-elevated border-t border-border mt-4">
+      <PageContainer className="py-8 sm:py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <p className="font-bold text-text-primary text-body mb-1">Ferpa Tech Day</p>
-            <p className="text-text-secondary text-caption whitespace-nowrap">
+            <p className="text-text-secondary text-caption">
               Comunidade de tecnologia em Fernandópolis — SP
             </p>
             <p className="gradient-text font-semibold text-caption mt-2">
@@ -80,7 +81,7 @@ export default function Footer() {
             da comunidade para a comunidade.
           </p>
         </div>
-      </div>
+      </PageContainer>
     </footer>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageContainer from "@/components/layout/PageContainer";
 import { PRESENTATION_PDF_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ApresentacaoPage() {
   return (
-    <div className="max-w-container mx-auto px-6 lg:px-10 py-8 flex flex-col gap-6 min-h-[calc(100vh-var(--header-height))]">
+    <PageContainer className="py-8 flex flex-col gap-6 min-h-[calc(100dvh-var(--header-height))]">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-heading-2 font-bold text-text-primary">
@@ -53,6 +54,6 @@ export default function ApresentacaoPage() {
           Voltar ao início
         </Link>
       </p>
-    </div>
+    </PageContainer>
   );
 }

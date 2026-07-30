@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import PageContainer from "@/components/layout/PageContainer";
 import partnersData from "@/data/partners.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -86,9 +87,9 @@ export default function Partners() {
   );
 
   return (
-    <section id="partners" className="relative overflow-hidden py-16 md:py-24 bg-bg-elevated/30">
+    <section id="partners" className="relative overflow-hidden section-shell bg-bg-elevated/30">
       <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
-      <div className="max-w-container mx-auto px-6 lg:px-10">
+      <PageContainer>
         <ScrollReveal>
           <SectionHeading
             label="Patrocínio & apoio"
@@ -134,7 +135,7 @@ export default function Partners() {
             Sua marca também pode fazer parte deste movimento.
           </p>
         </ScrollReveal>
-      </div>
+      </PageContainer>
     </section>
   );
 }

@@ -4,14 +4,15 @@ import { faMapLocationDot, faBuildingColumns } from "@fortawesome/free-solid-svg
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import PageContainer from "@/components/layout/PageContainer";
 import locationData from "@/data/location.json";
 
 export default function Location() {
   const { venue } = locationData;
 
   return (
-    <section id="location" className="py-16 md:py-24">
-      <div className="max-w-container mx-auto px-6 lg:px-10">
+    <section id="location" className="section-shell">
+      <PageContainer>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
           <ScrollReveal>
             <div>
@@ -39,7 +40,7 @@ export default function Location() {
                 <div className="absolute inset-0 bg-gradient-to-t from-bg-surface/70 to-transparent" />
               </div>
 
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
 
                 <h3 className="text-heading-3 font-bold text-text-primary mb-2">
                   {venue.name}
@@ -66,7 +67,7 @@ export default function Location() {
             </div>
           </ScrollReveal>
         </div>
-      </div>
+      </PageContainer>
     </section>
   );
 }

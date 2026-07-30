@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import PageContainer from "@/components/layout/PageContainer";
 
 export default function Home() {
   return (
-    <div className="max-w-container mx-auto px-6 lg:px-10 py-12 text-text-primary">
+    <PageContainer className="py-10 sm:py-12 text-text-primary">
       <h1 className="text-heading-2 font-bold mb-8 text-text-primary">
         Código de Conduta da Comunidade Ferpa Tech Day
       </h1>
@@ -122,6 +123,6 @@ export default function Home() {
           , versão 2.1.
         </p>
       </section>
-    </div>
+    </PageContainer>
   );
 }

@@ -1,137 +1,147 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "@/components/ui/Button";
+import PageContainer from "@/components/layout/PageContainer";
+import MobileNav from "@/components/layout/MobileNav";
 import { NAV_LINKS, TICKET_URL } from "@/lib/constants";
+
+function resolveNavHref(href: string, pathname: string) {
+  if (href.startsWith("#")) {
+    return pathname === "/" ? href : `/${href}`;
+  }
+  return href;
+}
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const toggleMenu = useCallback(() => setMenuOpen((open) => !open), []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
+    closeMenu();
+  }, [pathname, closeMenu]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
     };
-  }, [menuOpen]);
+
+    const onResize = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) closeMenu();
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [menuOpen, closeMenu]);
+
+  const showBarBackground = scrolled || menuOpen;
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-base ${
-        scrolled
-          ? "bg-bg-primary/80 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
-      style={{ height: "var(--header-height)" }}
-    >
-      <div className="max-w-container mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center gap-3 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
-          aria-label="Ferpa Tech Day — página inicial"
-        >
-          <Image
-            src="/assets/logo-site.png"
-            alt="Logo Ferpa Tech Day"
-            width={160}
-            height={80}
-            className="h-9 sm:h-10 w-auto"
-            priority
-          />
-          
-        </Link>
-
-        <nav className="hidden lg:flex items-center gap-6" aria-label="Navegação principal">
-          {NAV_LINKS.map((link) =>
-            link.href.startsWith("/") ? (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-caption font-medium text-text-secondary hover:text-text-primary transition-colors duration-fast"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-caption font-medium text-text-secondary hover:text-text-primary transition-colors duration-fast"
-              >
-                {link.label}
-              </a>
-            )
-          )}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <Button
-            href={TICKET_URL}
-            external
-            variant="primary"
-            className="hidden sm:inline-flex text-caption px-4 py-2"
-            ariaLabel="Comprar ingresso para o Ferpa Tech Day"
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-base ${
+          showBarBackground
+            ? "bg-bg-primary/92 backdrop-blur-xl border-b border-border/80 shadow-lg"
+            : "bg-transparent"
+        }`}
+        style={{
+          height: "var(--header-height)",
+          paddingTop: "env(safe-area-inset-top, 0px)",
+        }}
+      >
+        <PageContainer className="h-full flex items-center justify-between gap-3">
+          <Link
+            href="/"
+            className="relative z-[1] flex items-center gap-2 shrink-0 min-w-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
+            aria-label="Ferpa Tech Day — página inicial"
+            onClick={closeMenu}
           >
-            Garantir Ingressos
-          </Button>
+            <Image
+              src="/assets/logo-site.png"
+              alt="Logo Ferpa Tech Day"
+              width={160}
+              height={80}
+              className="h-8 sm:h-9 w-auto max-w-[9.5rem] sm:max-w-none"
+              priority
+            />
+          </Link>
 
-          <button
-            type="button"
-            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-md text-text-primary hover:bg-bg-elevated transition-colors duration-fast focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-expanded={menuOpen}
-            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          <nav
+            className="hidden lg:flex items-center gap-1 xl:gap-2"
+            aria-label="Navegação principal"
           >
-            <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} className="w-5 h-5" />
-          </button>
-        </div>
-      </div>
+            {NAV_LINKS.map((link) => {
+              const href = resolveNavHref(link.href, pathname);
+              const className =
+                "text-caption font-medium text-text-secondary hover:text-text-primary px-3 py-2 rounded-md hover:bg-bg-elevated/80 transition-colors duration-fast";
 
-      {menuOpen && (
-        <nav
-          className="lg:hidden absolute top-full left-0 right-0 bg-bg-primary/95 backdrop-blur-md border-b border-border px-4 py-4 flex flex-col gap-1"
-          aria-label="Navegação mobile"
-        >
-          {NAV_LINKS.map((link) =>
-            link.href.startsWith("/") ? (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="py-3 px-2 text-body text-text-secondary hover:text-text-primary border-b border-border transition-colors duration-fast"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="py-3 px-2 text-body text-text-secondary hover:text-text-primary border-b border-border transition-colors duration-fast"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            )
-          )}
-          <Button
-            href={TICKET_URL}
-            external
-            variant="primary"
-            className="mt-3 w-full"
-            ariaLabel="Comprar ingresso para o Ferpa Tech Day"
-          >
-            Garantir Ingressos
-          </Button>
-        </nav>
-      )}
-    </header>
+              return link.href.startsWith("/") && !link.href.startsWith("/#") ? (
+                <Link key={link.href} href={href} className={className}>
+                  {link.label}
+                </Link>
+              ) : (
+                <a key={link.href} href={href} className={className}>
+                  {link.label}
+                </a>
+              );
+            })}
+          </nav>
+
+          <div className="relative z-[1] flex items-center gap-2 shrink-0">
+            <Button
+              href={TICKET_URL}
+              external
+              variant="primary"
+              className="hidden lg:inline-flex text-caption px-4 py-2"
+              ariaLabel="Comprar ingresso para o Ferpa Tech Day"
+            >
+              Garantir Ingressos
+            </Button>
+
+            <button
+              type="button"
+              className={`lg:hidden menu-toggle relative flex h-11 w-11 items-center justify-center rounded-xl transition-colors duration-base outline-none ring-0 focus:outline-none focus-visible:!outline-none focus-visible:ring-0 [-webkit-tap-highlight-color:transparent] ${
+                menuOpen
+                  ? "bg-accent/15 text-accent"
+                  : "bg-transparent text-text-primary hover:bg-bg-elevated/80 active:bg-bg-elevated"
+              }`}
+              onClick={toggleMenu}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-nav"
+              aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            >
+              <FontAwesomeIcon
+                icon={menuOpen ? faXmark : faBars}
+                className={`w-5 h-5 transition-transform duration-base ${menuOpen ? "rotate-90 scale-110" : ""}`}
+              />
+            </button>
+          </div>
+        </PageContainer>
+      </header>
+
+      <MobileNav open={menuOpen} onClose={closeMenu} pathname={pathname} />
+    </>
   );
 }

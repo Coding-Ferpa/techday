@@ -57,7 +57,7 @@ export default function Countdown() {
   ];
 
   return (
-    <section className="py-10 sm:py-12 bg-bg-surface/40 border-y border-border/60 backdrop-blur-sm">
+    <section className="py-10 sm:py-12 bg-bg-surface/40 backdrop-blur-sm">
       <PageContainer>
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">

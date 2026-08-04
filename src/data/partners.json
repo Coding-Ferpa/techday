@@ -3,9 +3,18 @@
   "subtitle": "Marcas e instituições que investem no ecossistema de tecnologia de Fernandópolis e região.",
   "partners": [
     {
+      "id": "github",
+      "name": "GitHub",
+      "type": "institutional",
+      "category": "Apoio institucional",
+      "description": "Plataforma que conecta e impulsiona a comunidade global de desenvolvimento.",
+      "url": "https://github.com/",
+      "logo": "/assets/GitHub_Lockup_White_Clearspace.svg"
+    },
+    {
       "id": "unifef",
       "name": "Unifef",
-      "type": "partner",
+      "type": "institutional",
       "category": "Apoio institucional",
       "description": "Centro Universitário parceiro e sede do Ferpa Tech Day.",
       "url": "https://unifef.edu.br/",
@@ -19,15 +28,6 @@
       "description": "Experiência segura e simples para a venda oficial dos ingressos.",
       "url": "https://ticketimediato.com/product/details/ferpa-tech-day-2026.html?productId=12117",
       "logo": "/assets/ticketimediato.png"
-    },
-    {
-      "id": "github",
-      "name": "GitHub",
-      "type": "sponsor",
-      "category": "Tecnologia",
-      "description": "Plataforma que conecta e impulsiona a comunidade global de desenvolvimento.",
-      "url": "https://github.com/",
-      "logo": "/assets/github.png"
     }
   ]
 }

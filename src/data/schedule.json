@@ -37,7 +37,31 @@
     {
       "id": "5",
       "time": "12:30",
-      "title": "Encerramento e Sorteios",
+      "title": "Almoço",
+      "speaker": "Todos",
+      "type": "break",
+      "description": "Intervalo para almoço antes das oficinas da tarde."
+    },
+    {
+      "id": "6",
+      "time": "13:30 – 15:00",
+      "title": "Oficinas – Bloco 1",
+      "speaker": "Facilitadores selecionados",
+      "type": "workshop",
+      "description": "Primeiro bloco de workshops práticos da tarde."
+    },
+    {
+      "id": "7",
+      "time": "15:20 – 16:50",
+      "title": "Oficinas – Bloco 2",
+      "speaker": "Facilitadores selecionados",
+      "type": "workshop",
+      "description": "Segundo bloco de workshops práticos da tarde."
+    },
+    {
+      "id": "8",
+      "time": "17:00",
+      "title": "Encerramento",
       "speaker": "Organização Ferpa Tech Day",
       "type": "closing",
       "description": "Agradecimentos, sorteio de brindes e networking final."

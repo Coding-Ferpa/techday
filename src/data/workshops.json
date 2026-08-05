@@ -1,0 +1,22 @@
+{
+  "label": "Submissão aberta",
+  "title": "Compartilhe seu conhecimento",
+  "intro": "Proponha um workshop prático e faça parte da programação oficial do Ferpa Tech Day 2026.",
+  "topics": "Desenvolvimento, IA, dados, cloud, segurança, carreira, design, open source e temas relacionados.",
+  "cta": "As vagas são limitadas.",
+  "buttonLabel": "Submeter proposta",
+  "highlights": [
+    {
+      "title": "Duração",
+      "description": "Até 3h, incluindo intervalo"
+    },
+    {
+      "title": "Data e local",
+      "description": "24 de outubro · UNIFEF"
+    },
+    {
+      "title": "Facilitadores",
+      "description": "Ingresso gratuito e divulgação"
+    }
+  ]
+}

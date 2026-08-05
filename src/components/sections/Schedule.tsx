@@ -10,6 +10,7 @@ import {
   faFlagCheckered,
   faTicket,
   faUser,
+  faChalkboardTeacher,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Schedule() {
@@ -21,6 +22,8 @@ export default function Schedule() {
         return faTicket;
       case "closing":
         return faFlagCheckered;
+      case "workshop":
+        return faChalkboardTeacher;
       default:
         return faMicrophone;
     }

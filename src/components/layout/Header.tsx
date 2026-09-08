@@ -63,7 +63,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-[110] transition-all duration-base ${
           showBarBackground
-            ? "bg-bg-primary/92 backdrop-blur-xl border-b border-border/80 shadow-lg"
+            ? "bg-bg-primary/95 backdrop-blur-xl border-b border-[#262626] shadow-lg"
             : "bg-transparent"
         }`}
         style={{

@@ -1,12 +1,32 @@
 {
   "title": "Parceiros que fazem acontecer",
   "subtitle": "Marcas e instituições que investem no ecossistema de tecnologia de Fernandópolis e região.",
-  "partners": [
+  "sponsors": [
+    {
+      "id": "datavale",
+      "name": "Datavale",
+      "tier": "prata",
+      "category": "Cota Prata",
+      "description": "Sistemas de gestão empresarial (ERP) e inteligência para indústrias e distribuição.",
+      "url": "https://www.datavale.com.br/",
+      "logo": "/assets/datavale.png"
+    },
+    {
+      "id": "precisao-sistemas",
+      "name": "Precisão Sistemas",
+      "tier": "bronze",
+      "category": "Cota Bronze",
+      "description": "Tecnologia e automação com inteligência para gestão do varejo farmacêutico e comercial.",
+      "url": "https://precisaosistemas.com.br/",
+      "logo": "/assets/precisão-sistemas.png"
+    }
+  ],
+  "institutional": [
     {
       "id": "github",
       "name": "GitHub",
       "type": "institutional",
-      "category": "Apoio institucional",
+      "category": "Apoio Institucional",
       "description": "Plataforma que conecta e impulsiona a comunidade global de desenvolvimento.",
       "url": "https://github.com/",
       "logo": "/assets/GitHub_Lockup_White_Clearspace.svg"
@@ -15,8 +35,8 @@
       "id": "unifef",
       "name": "Unifef",
       "type": "institutional",
-      "category": "Apoio institucional",
-      "description": "Centro Universitário parceiro e sede do Ferpa Tech Day.",
+      "category": "Sede & Apoio Universitário",
+      "description": "Centro Universitário parceiro e sede oficial do Ferpa Tech Day 2026.",
       "url": "https://unifef.edu.br/",
       "logo": "/assets/unifef.jpg"
     },
@@ -24,10 +44,83 @@
       "id": "ticket-imediato",
       "name": "Ticket Imediato",
       "type": "partner",
-      "category": "Plataforma oficial",
+      "category": "Plataforma Oficial",
       "description": "Experiência segura e simples para a venda oficial dos ingressos.",
       "url": "https://ticketimediato.com/product/details/ferpa-tech-day-2026.html?productId=12117",
       "logo": "/assets/ticketimediato.png"
+    }
+  ],
+  "plans": [
+    {
+      "id": "apoio",
+      "name": "Apoio",
+      "price": "Custeio direto ou valor livre",
+      "badge": "Cota Apoio",
+      "color": "from-emerald-500/20 to-emerald-500/5",
+      "borderColor": "border-emerald-500/40",
+      "textColor": "text-emerald-400",
+      "ringColor": "ring-emerald-500/30",
+      "digital": "Menção nos Stories relacionada ao item apoiado",
+      "physical": "Placa/Display na mesa do item custeado (ex: display na mesa do café) + Menção do MC",
+      "extra": "Menção durante o uso do item patrocinado",
+      "giveaways": "Permite exposição de materiais no item patrocinado"
+    },
+    {
+      "id": "bronze",
+      "name": "Bronze",
+      "price": "R$ 250",
+      "badge": "Cota Bronze",
+      "color": "from-amber-700/20 to-amber-700/5",
+      "borderColor": "border-amber-600/40",
+      "textColor": "text-amber-500",
+      "ringColor": "ring-amber-600/30",
+      "digital": "1 Post conjunto (com outros Bronzes) + Presença no site",
+      "physical": "Logo PEQUENA no banner principal",
+      "extra": "Logo no site do evento",
+      "giveaways": "Materiais inclusos no kit do participante (adesivos, flyers, etc.)"
+    },
+    {
+      "id": "prata",
+      "name": "Prata",
+      "price": "R$ 350",
+      "badge": "Cota Prata",
+      "color": "from-slate-300/20 to-slate-300/5",
+      "borderColor": "border-slate-300/50",
+      "textColor": "text-slate-200",
+      "ringColor": "ring-slate-300/40",
+      "digital": "1 Post exclusivo + Presença no site",
+      "physical": "Logo MÉDIA no banner + Menção do MC no encerramento",
+      "extra": "Logo no site do evento + Logo nos slides de abertura e intervalo",
+      "giveaways": "Materiais inclusos no kit do participante"
+    },
+    {
+      "id": "ouro",
+      "name": "Ouro",
+      "price": "R$ 700",
+      "badge": "Cota Ouro",
+      "popular": true,
+      "color": "from-yellow-400/20 to-yellow-500/5",
+      "borderColor": "border-yellow-400/60",
+      "textColor": "text-yellow-400",
+      "ringColor": "ring-yellow-400/40",
+      "digital": "1 Post exclusivo + Menção nos Stories + Presença no site",
+      "physical": "Logo GRANDE no banner + Distribuição de brindes nas cadeiras + Menção do MC",
+      "extra": "Logo no site do evento + Logo nos slides de abertura e intervalo",
+      "giveaways": "Materiais inclusos no kit do participante + Distribuição de brindes"
+    },
+    {
+      "id": "diamante",
+      "name": "Diamante",
+      "price": "R$ 1.000",
+      "badge": "Cota Diamante",
+      "color": "from-cyan-400/25 to-blue-500/10",
+      "borderColor": "border-cyan-400/70",
+      "textColor": "text-cyan-300",
+      "ringColor": "ring-cyan-400/50",
+      "digital": "2 Posts exclusivos + Destaque nos Stories + Presença no site",
+      "physical": "Logo GIGANTE no banner principal + 3 min de fala na abertura + Pode levar 1 banner próprio (Roll-up) + Menção do MC",
+      "extra": "Logo em todas as artes oficiais + Logo nos slides de abertura, intervalo e encerramento + Logo nos certificados digitais",
+      "giveaways": "Materiais inclusos no kit + Distribuição de brindes + Mesa de exposição"
     }
   ]
 }

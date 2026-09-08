@@ -4,67 +4,95 @@
   "schedule": [
     {
       "id": "1",
-      "time": "08:00",
-      "title": "Credenciamento e Abertura",
+      "time": "07:30 – 08:30",
+      "title": "Credenciamento e Abertura Oficial",
       "speaker": "Organização Ferpa Tech Day",
       "type": "opening",
-      "description": "Boas-vindas, entrega de crachás e abertura oficial do evento."
+      "description": "Recepção dos participantes, entrega de kits/crachás e abertura oficial do evento."
     },
     {
       "id": "2",
-      "time": "09:00",
-      "title": "Palestra — a definir",
+      "time": "08:30 – 09:20",
+      "title": "Palestra 1 — a definir",
       "speaker": "A definir",
+      "speakerId": "palestra-1",
       "type": "talk",
       "description": "Tema e palestrante serão divulgados em breve."
     },
     {
       "id": "3",
-      "time": "10:30",
-      "title": "Coffee Break & Networking",
-      "speaker": "Todos",
-      "type": "break",
-      "description": "Pausa para café, troca de ideias e conexão com os parceiros."
-    },
-    {
-      "id": "4",
-      "time": "11:15",
-      "title": "Palestra — a definir",
+      "time": "09:20 – 10:10",
+      "title": "Palestra 2 — a definir",
       "speaker": "A definir",
+      "speakerId": "palestra-2",
       "type": "talk",
       "description": "Tema e palestrante serão divulgados em breve."
     },
     {
-      "id": "5",
-      "time": "12:30",
-      "title": "Almoço",
+      "id": "4",
+      "time": "10:10 – 10:30",
+      "title": "Coffee Break & Networking",
       "speaker": "Todos",
       "type": "break",
-      "description": "Intervalo para almoço antes das oficinas da tarde."
+      "description": "Pausa para café, troca de ideias, conexão com a comunidade e visita aos estandes de parceiros."
+    },
+    {
+      "id": "5",
+      "time": "10:30 – 11:20",
+      "title": "Palestra 3 — a definir",
+      "speaker": "A definir",
+      "speakerId": "palestra-3",
+      "type": "talk",
+      "description": "Tema e palestrante serão divulgados em breve."
     },
     {
       "id": "6",
+      "time": "11:20 – 12:30",
+      "title": "Informática em Saúde: Aplicações, Tecnologias e Perspectivas para o Futuro",
+      "speaker": "Henrique Amaral (Philips)",
+      "speakerId": "henrique-amaral",
+      "type": "talk",
+      "description": "A tecnologia aplicada à saúde promove processos e serviços mais seguros, eficientes e integrados, auxiliando profissionais de saúde e pacientes."
+    },
+    {
+      "id": "7",
+      "time": "12:30 – 13:30",
+      "title": "Intervalo para Almoço",
+      "speaker": "Todos",
+      "type": "break",
+      "description": "Intervalo para almoço e descanso antes do início das oficinas práticas da tarde."
+    },
+    {
+      "id": "8",
       "time": "13:30 – 15:00",
       "title": "Oficinas – Bloco 1",
       "speaker": "Facilitadores selecionados",
       "type": "workshop",
-      "description": "Primeiro bloco de workshops práticos da tarde."
+      "description": "Primeiro bloco de workshops práticos e imersivos nos laboratórios de informática."
     },
     {
-      "id": "7",
+      "id": "9",
+      "time": "15:00 – 15:20",
+      "title": "Intervalo & Troca de Salas",
+      "speaker": "Todos",
+      "type": "break",
+      "description": "Breve intervalo e deslocamento entre os laboratórios para o segundo bloco."
+    },
+    {
+      "id": "10",
       "time": "15:20 – 16:50",
       "title": "Oficinas – Bloco 2",
       "speaker": "Facilitadores selecionados",
       "type": "workshop",
-      "description": "Segundo bloco de workshops práticos da tarde."
+      "description": "Segundo bloco de workshops práticos e imersivos nos laboratórios de informática."
     },
     {
-      "id": "8",
+      "id": "11",
       "time": "17:00",
-      "title": "Encerramento",
+      "title": "Encerramento & Sorteios",
       "speaker": "Organização Ferpa Tech Day",
       "type": "closing",
-      "description": "Agradecimentos, sorteio de brindes e networking final."
+      "description": "Agradecimentos finais aos participantes e patrocinadores, sorteio de brindes e encerramento oficial."
     }
   ]
 }

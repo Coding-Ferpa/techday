@@ -59,14 +59,18 @@ export default function Partners() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Conhecer ${sponsor.name}`}
-                      className="group relative flex h-32 sm:h-36 w-full max-w-[340px] sm:max-w-[400px] items-center justify-center rounded-2xl border border-[#262626] bg-[#121212] px-8 py-5 transition-all duration-base hover:border-accent/40 hover:bg-[#181818] hover:shadow-[0_0_25px_rgba(81,207,145,0.12)] hover:-translate-y-0.5"
+                      className="group relative flex h-32 sm:h-36 w-full max-w-[340px] sm:max-w-[400px] items-center justify-center rounded-2xl border-2 border-[#5e17eb] bg-transparent px-8 py-5 outline-none transition-all duration-base hover:shadow-[0_0_24px_rgba(94,23,235,0.55)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
                     >
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 rounded-2xl bg-[rgba(94,23,235,0)] opacity-0 blur-xl transition-all duration-500 group-hover:bg-[rgba(94,23,235,0.3)] group-hover:opacity-100"
+                      />
                       <Image
                         src={sponsor.logo}
                         alt={sponsor.name}
                         width={320}
                         height={120}
-                        className="max-h-16 sm:max-h-20 w-auto object-contain transition-transform duration-base group-hover:scale-105"
+                        className="relative z-10 max-h-16 sm:max-h-20 w-auto object-contain transition-transform duration-base group-hover:scale-105"
                       />
                     </a>
                   ))}
@@ -90,14 +94,18 @@ export default function Partners() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Conhecer ${sponsor.name}`}
-                      className="group relative flex h-24 sm:h-28 w-full max-w-[260px] sm:max-w-[300px] items-center justify-center rounded-2xl border border-[#262626] bg-[#121212] p-5 transition-all duration-base hover:border-accent/40 hover:bg-[#181818] hover:shadow-[0_0_25px_rgba(81,207,145,0.12)] hover:-translate-y-0.5"
+                      className="group relative flex h-24 sm:h-28 w-full max-w-[260px] sm:max-w-[300px] items-center justify-center rounded-2xl border-2 border-[#5e17eb] bg-transparent p-5 outline-none transition-all duration-base hover:shadow-[0_0_24px_rgba(94,23,235,0.55)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
                     >
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 rounded-2xl bg-[rgba(94,23,235,0)] opacity-0 blur-xl transition-all duration-500 group-hover:bg-[rgba(94,23,235,0.3)] group-hover:opacity-100"
+                      />
                       <Image
                         src={sponsor.logo}
                         alt={sponsor.name}
                         width={240}
                         height={90}
-                        className="max-h-11 sm:max-h-12 w-auto object-contain transition-transform duration-base group-hover:scale-105"
+                        className="relative z-10 max-h-11 sm:max-h-12 w-auto object-contain transition-transform duration-base group-hover:scale-105"
                       />
                     </a>
                   ))}
@@ -121,8 +129,12 @@ export default function Partners() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Conhecer ${partner.name}`}
-                      className="group relative flex h-24 sm:h-28 w-full max-w-[240px] sm:max-w-[280px] items-center justify-center rounded-2xl border border-[#262626] bg-[#121212] p-5 transition-all duration-base hover:border-accent/40 hover:bg-[#181818] hover:shadow-[0_0_25px_rgba(81,207,145,0.12)] hover:-translate-y-0.5"
+                      className="group relative flex h-24 sm:h-28 w-full max-w-[240px] sm:max-w-[280px] items-center justify-center rounded-2xl border-2 border-[#5e17eb] bg-transparent p-5 outline-none transition-all duration-base hover:shadow-[0_0_24px_rgba(94,23,235,0.55)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
                     >
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 rounded-2xl bg-[rgba(94,23,235,0)] opacity-0 blur-xl transition-all duration-500 group-hover:bg-[rgba(94,23,235,0.3)] group-hover:opacity-100"
+                      />
                       <Image
                         src={partner.logo}
                         alt={partner.name}
@@ -132,7 +144,7 @@ export default function Partners() {
                           partner.id === "unifef"
                             ? "h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover shadow-sm"
                             : "max-h-10 sm:max-h-11 w-auto object-contain"
-                        } transition-transform duration-base group-hover:scale-105`}
+                        } relative z-10 transition-transform duration-base group-hover:scale-105`}
                         unoptimized={partner.logo.endsWith(".svg")}
                       />
                     </a>

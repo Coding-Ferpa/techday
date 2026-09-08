@@ -52,7 +52,13 @@ export const metadata: Metadata = {
     images: ["/assets/logo-site.png"],
   },
   icons: {
-    icon: [{ url: "/assets/logo-site.png", type: "image/png" }],
+    icon: [
+      { url: "/assets/techday-icon.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    shortcut: "/assets/techday-icon.png",
+    apple: "/assets/techday-icon.png",
   },
 };
 
@@ -67,6 +73,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" type="image/png" href="/assets/techday-icon.png" />
+        <link rel="shortcut icon" href="/assets/techday-icon.png" />
+        <link rel="apple-touch-icon" href="/assets/techday-icon.png" />
+      </head>
       <body
         className={`${leagueSpartan.variable} ${spaceMono.variable} ${spriteGraffitiFallback.variable} ${leagueSpartan.className} flex flex-col min-h-screen font-body`}
       >

@@ -1,0 +1,40 @@
+{
+  "title": "Palestrantes Confirmados",
+  "subtitle": "Especialistas do mercado e da academia compartilhando visões práticas e o futuro da tecnologia no Ferpa Tech Day.",
+  "speakers": [
+    {
+      "id": "henrique-amaral",
+      "name": "Henrique Amaral",
+      "role": "Consultor Técnico",
+      "company": "Philips",
+      "photo": "/assets/HenriqueAmaral.jpeg",
+      "time": "11:20 – 12:30",
+      "stage": "Palco Principal",
+      "badge": "Palestrante Confirmado",
+      "talkTitle": "Informática em Saúde: Aplicações, Tecnologias e Perspectivas para o Futuro",
+      "talkTopic": "A tecnologia aplicada à saúde promove processos e serviços mais seguros, eficientes e integrados, auxiliando os profissionais de saúde em seu trabalho diário e contribuindo para uma melhor experiência e jornada dos pacientes.",
+      "bio": "Henrique Amaral é bacharel em Informática Biomédica e doutor em Processamento e Análise de Imagens Médicas pela USP de Ribeirão Preto. Realizou pós-doutorado na University of Washington e na UT Health, nos Estados Unidos. Profissionalmente, atuou na área de informática em saúde em instituições e empresas como Hospital A.C. Camargo, Dasa, Siemens, GE e Philips.",
+      "credentials": [
+        "Doutor pela USP de Ribeirão Preto",
+        "Pós-doutorado pela University of Washington & UT Health",
+        "Atuações: Hospital A.C. Camargo, Dasa, Siemens, GE e Philips"
+      ]
+    }
+  ],
+  "upcomingSpeakers": [
+    {
+      "id": "liszeila-abdala",
+      "name": "Liszeila Abdala",
+      "time": "09:20 – 10:10",
+      "status": "unrevealed"
+    },
+    {
+      "id": "eustaquio-rangel",
+      "name": "Eustaquio Rangel",
+      "role": "Engenheiro de software sênior",
+      "time": "10:30 – 11:20",
+      "talkTopic": "Vamos conhecer um pouco da linguagem Ruby e do seu framework catalisador Rails, com hands-on, montando um pequeno app web com poucas linhas de código!",
+      "status": "unrevealed"
+    }
+  ]
+}

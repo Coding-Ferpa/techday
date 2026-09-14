@@ -26,12 +26,19 @@ import speakersData from "@/data/speakers.json";
 import { TICKET_URL, WORKSHOP_FORM_URL } from "@/lib/constants";
 
 export default function Schedule() {
-  // Default to index 5 (Henrique Amaral - 11:20)
-  const [activeItemIndex, setActiveItemIndex] = useState(5);
+  // Default to index 4 (Eustáquio Rangel - 10:30)
+  const [activeItemIndex, setActiveItemIndex] = useState(4);
   const [isBioExpanded, setIsBioExpanded] = useState(false);
 
   const tabsContainerRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  const eustaquioSpeaker = speakersData.speakers.find(
+    (s) => s.id === "eustaquio-rangel"
+  );
+  const henriqueSpeaker = speakersData.speakers.find(
+    (s) => s.id === "henrique-amaral"
+  );
 
   const scheduleItems = [
     {
@@ -123,26 +130,34 @@ export default function Schedule() {
       actionUrl: "#partners",
     },
     {
-      id: "palestra-3",
+      id: "eustaquio-rangel",
       shortTime: "10:30",
       time: "10:30 – 11:20",
-      tabLabel: "Palestra 3",
+      tabLabel: "Eustáquio Rangel",
       type: "talk",
-      badge: "Palestra 3 · Em Breve",
+      isConfirmed: true,
+      badge: "Palestra Magna · Confirmado",
       stage: "Palco Principal",
-      title: "Palestra Magna 3 — Engenharia & Desenvolvimento",
-      speaker: "Palestrante Convidado",
-      role: "Especialista em Tecnologia",
-      company: "A divulgar",
+      title:
+        eustaquioSpeaker?.talkTitle ||
+        "Conhecendo Ruby e Rails",
+      speaker: eustaquioSpeaker?.name || "Eustáquio Rangel",
+      role: eustaquioSpeaker?.role || "Engenheiro de Software Sênior",
+      company: eustaquioSpeaker?.company || "Bluefish",
+      photo: eustaquioSpeaker?.photo || "/assets/eustaquio.jpg",
       description:
-        "Retorno do coffee break com uma apresentação prática e envolvente abordando desenvolvimento moderno de software, ferramentas e metodologias ágeis.",
-      highlights: [
-        "Palco Principal pós-Coffee Break",
-        "Conteúdo prático de engenharia de software",
-        "Perguntas e respostas ao vivo",
+        eustaquioSpeaker?.talkTopic ||
+        "Vamos conhecer um pouco da linguagem Ruby e do seu framework catalisador Rails, com hands-on, montando um pequeno app web com poucas linhas de código!",
+      bio:
+        eustaquioSpeaker?.bio ||
+        "Com mais de 30 anos de experiência em desenvolvimento de software, Eustáquio Rangel trabalha com Ruby desde o início dos anos 2000 e é uma das referências da comunidade Ruby no Brasil. Entusiasta e defensor do Software Livre, é mantenedor de projetos de código aberto e autor de livros sobre Ruby, Rails e Git. Em 2006, publicou Ruby: Conhecendo a Linguagem, reconhecido como o primeiro livro de Ruby publicado no Brasil. Eustáquio também é fundador e desenvolvedor da Bluefish, empresa especializada em consultoria, desenvolvimento e treinamento utilizando soluções de Software Livre.",
+      highlights: eustaquioSpeaker?.credentials || [
+        "Mais de 30 anos de experiência em desenvolvimento de software",
+        "Referência em Ruby no Brasil e autor do 1º livro de Ruby publicado no país",
+        "Fundador e desenvolvedor da Bluefish & mantenedor Open Source",
       ],
-      actionLabel: "Acompanhar no Instagram",
-      actionUrl: "https://instagram.com/ferpatechday",
+      actionLabel: "Garantir Ingresso",
+      actionUrl: TICKET_URL,
     },
     {
       id: "henrique-amaral",
@@ -154,19 +169,19 @@ export default function Schedule() {
       badge: "Palestra Magna · Confirmado",
       stage: "Palco Principal",
       title:
-        speakersData.speakers[0]?.talkTitle ||
+        henriqueSpeaker?.talkTitle ||
         "Informática em Saúde: Aplicações, Tecnologias e Perspectivas para o Futuro",
-      speaker: speakersData.speakers[0]?.name || "Henrique Amaral",
-      role: speakersData.speakers[0]?.role || "Consultor Técnico",
-      company: speakersData.speakers[0]?.company || "Philips",
-      photo: speakersData.speakers[0]?.photo || "/assets/HenriqueAmaral.jpeg",
+      speaker: henriqueSpeaker?.name || "Henrique Amaral",
+      role: henriqueSpeaker?.role || "Consultor Técnico",
+      company: henriqueSpeaker?.company || "Philips",
+      photo: henriqueSpeaker?.photo || "/assets/HenriqueAmaral.jpeg",
       description:
-        speakersData.speakers[0]?.talkTopic ||
+        henriqueSpeaker?.talkTopic ||
         "A tecnologia aplicada à saúde promove processos e serviços mais seguros, eficientes e integrados, auxiliando os profissionais de saúde em seu trabalho diário e contribuindo para uma melhor experiência e jornada dos pacientes.",
       bio:
-        speakersData.speakers[0]?.bio ||
+        henriqueSpeaker?.bio ||
         "Henrique Amaral é bacharel em Informática Biomédica e doutor em Processamento e Análise de Imagens Médicas pela USP de Ribeirão Preto. Realizou pós-doutorado na University of Washington e na UT Health, nos Estados Unidos. Profissionalmente, atuou na área de informática em saúde em instituições e empresas como Hospital A.C. Camargo, Dasa, Siemens, GE e Philips.",
-      highlights: speakersData.speakers[0]?.credentials || [
+      highlights: henriqueSpeaker?.credentials || [
         "Doutor pela USP de Ribeirão Preto",
         "Pós-doutorado pela University of Washington & UT Health",
         "Atuações: Hospital A.C. Camargo, Dasa, Siemens, GE e Philips",

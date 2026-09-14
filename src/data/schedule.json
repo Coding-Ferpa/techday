@@ -39,11 +39,11 @@
     {
       "id": "5",
       "time": "10:30 – 11:20",
-      "title": "Palestra 3 — a definir",
-      "speaker": "A definir",
-      "speakerId": "palestra-3",
+      "title": "Conhecendo Ruby e Rails",
+      "speaker": "Eustáquio Rangel (Bluefish)",
+      "speakerId": "eustaquio-rangel",
       "type": "talk",
-      "description": "Tema e palestrante serão divulgados em breve."
+      "description": "Vamos conhecer um pouco da linguagem Ruby e do seu framework catalisador Rails, com hands-on, montando um pequeno app web com poucas linhas de código!"
     },
     {
       "id": "6",

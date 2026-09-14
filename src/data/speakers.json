@@ -3,6 +3,24 @@
   "subtitle": "Especialistas do mercado e da academia compartilhando visões práticas e o futuro da tecnologia no Ferpa Tech Day.",
   "speakers": [
     {
+      "id": "eustaquio-rangel",
+      "name": "Eustáquio Rangel",
+      "role": "Engenheiro de Software Sênior",
+      "company": "Bluefish",
+      "photo": "/assets/eustaquio.jpg",
+      "time": "10:30 – 11:20",
+      "stage": "Palco Principal",
+      "badge": "Palestrante Confirmado",
+      "talkTitle": "Conhecendo Ruby e Rails",
+      "talkTopic": "Vamos conhecer um pouco da linguagem Ruby e do seu framework catalisador Rails, com hands-on, montando um pequeno app web com poucas linhas de código!",
+      "bio": "Com mais de 30 anos de experiência em desenvolvimento de software, Eustáquio Rangel trabalha com Ruby desde o início dos anos 2000 e é uma das referências da comunidade Ruby no Brasil. Entusiasta e defensor do Software Livre, é mantenedor de projetos de código aberto e autor de livros sobre Ruby, Rails e Git. Em 2006, publicou Ruby: Conhecendo a Linguagem, reconhecido como o primeiro livro de Ruby publicado no Brasil. Eustáquio também é fundador e desenvolvedor da Bluefish, empresa especializada em consultoria, desenvolvimento e treinamento utilizando soluções de Software Livre.",
+      "credentials": [
+        "Mais de 30 anos de experiência em desenvolvimento de software",
+        "Referência em Ruby no Brasil e autor do 1º livro de Ruby publicado no país",
+        "Fundador e desenvolvedor da Bluefish & mantenedor Open Source"
+      ]
+    },
+    {
       "id": "henrique-amaral",
       "name": "Henrique Amaral",
       "role": "Consultor Técnico",
@@ -26,14 +44,6 @@
       "id": "liszeila-abdala",
       "name": "Liszeila Abdala",
       "time": "09:20 – 10:10",
-      "status": "unrevealed"
-    },
-    {
-      "id": "eustaquio-rangel",
-      "name": "Eustaquio Rangel",
-      "role": "Engenheiro de software sênior",
-      "time": "10:30 – 11:20",
-      "talkTopic": "Vamos conhecer um pouco da linguagem Ruby e do seu framework catalisador Rails, com hands-on, montando um pequeno app web com poucas linhas de código!",
       "status": "unrevealed"
     }
   ]

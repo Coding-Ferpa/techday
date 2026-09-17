@@ -25,7 +25,6 @@ export const SOCIAL_LINKS = [
 export const NAV_LINKS = [
   { label: "Início", href: "#home" },
   { label: "Programação", href: "#schedule" },
-  { label: "Workshops", href: "#workshops" },
   { label: "Local", href: "#location" },
   { label: "Parceiros", href: "#partners" },
   { label: "Quem Somos", href: "#about" },

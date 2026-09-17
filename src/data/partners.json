@@ -3,13 +3,22 @@
   "subtitle": "Marcas e instituições que investem no ecossistema de tecnologia de Fernandópolis e região.",
   "sponsors": [
     {
+      "id": "suprasys",
+      "name": "Suprasys",
+      "tier": "diamante",
+      "category": "Cota Diamante",
+      "description": "Sistemas de gestão empresarial (ERP) e inteligência para indústrias e distribuição.",
+      "url": "https://www.suprasys.com.br/",
+      "logo": "/assets/logo-suprasys-white.png"
+    },
+    {
       "id": "datavale",
       "name": "Datavale",
       "tier": "prata",
       "category": "Cota Prata",
       "description": "Sistemas de gestão empresarial (ERP) e inteligência para indústrias e distribuição.",
       "url": "https://www.datavale.com.br/",
-      "logo": "/assets/datavale.png"
+      "logo": "/assets/datavale-white.png"
     },
     {
       "id": "precisao-sistemas",
@@ -18,7 +27,7 @@
       "category": "Cota Bronze",
       "description": "Tecnologia e automação com inteligência para gestão do varejo farmacêutico e comercial.",
       "url": "https://precisaosistemas.com.br/",
-      "logo": "/assets/precisão.jpg"
+      "logo": "/assets/precisao-transparent.png"
     }
   ],
   "institutional": [

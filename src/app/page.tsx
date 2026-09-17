@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import Countdown from "@/components/sections/Countdown";
 import Schedule from "@/components/sections/Schedule";
-import Workshops from "@/components/sections/Workshops";
 import Location from "@/components/sections/Location";
 import Partners from "@/components/sections/Partners";
 import PartnerCTA from "@/components/sections/PartnerCTA";
@@ -13,7 +12,6 @@ export default function Home() {
       <Hero />
       <Countdown />
       <Schedule />
-      <Workshops />
       <Location />
       <Partners />
       <PartnerCTA />

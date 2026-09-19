@@ -26,13 +26,16 @@ import speakersData from "@/data/speakers.json";
 import { TICKET_URL, WORKSHOP_FORM_URL } from "@/lib/constants";
 
 export default function Schedule() {
-  // Default to index 4 (Eustáquio Rangel - 10:30)
-  const [activeItemIndex, setActiveItemIndex] = useState(4);
+  // Default to index 2 (Liszeila Martingo - 09:20)
+  const [activeItemIndex, setActiveItemIndex] = useState(2);
   const [isBioExpanded, setIsBioExpanded] = useState(false);
 
   const tabsContainerRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
+  const liszeilaSpeaker = speakersData.speakers.find(
+    (s) => s.id === "liszeila-martingo"
+  );
   const eustaquioSpeaker = speakersData.speakers.find(
     (s) => s.id === "eustaquio-rangel"
   );
@@ -86,26 +89,34 @@ export default function Schedule() {
       actionUrl: "https://instagram.com/ferpatechday",
     },
     {
-      id: "palestra-2",
+      id: "liszeila-martingo",
       shortTime: "09:20",
       time: "09:20 – 10:10",
-      tabLabel: "Palestra 2",
+      tabLabel: "Liszeila Martingo",
       type: "talk",
-      badge: "Palestra 2 · Em Breve",
+      isConfirmed: true,
+      badge: "Palestra Magna · Confirmada",
       stage: "Palco Principal",
-      title: "Palestra Magna 2 — Inovação & Tecnologia",
-      speaker: "Palestrante Convidado",
-      role: "Especialista em Tecnologia",
-      company: "A divulgar",
+      title:
+        liszeilaSpeaker?.talkTitle ||
+        "Desmistificando a Inovação: A Visão Sistêmica da Inovação e os seus componentes",
+      speaker: liszeilaSpeaker?.name || "Liszeila Martingo",
+      role: liszeilaSpeaker?.role || "Docente & Gestora de Inovação",
+      company: liszeilaSpeaker?.company || "Fatec Rio Preto / CPS",
+      photo: liszeilaSpeaker?.photo || "/assets/liszeila.jpg",
       description:
-        "Segunda apresentação matutina antes do intervalo, trazendo debates sobre boas práticas de engenharia, arquitetura e mercado de desenvolvimento.",
-      highlights: [
-        "Palco Principal antes do Coffee Break",
-        "Sessão de Perguntas & Respostas ao vivo",
-        "Conexão direta com a comunidade",
+        liszeilaSpeaker?.talkTopic ||
+        "Na palestra, vamos explorar a visão sistêmica da inovação e os seus principais componentes, desmistificando conceitos e mostrando como aplicá-la na prática para gerar impacto real.",
+      bio:
+        liszeilaSpeaker?.bio ||
+        "Com uma trajetória sólida em educação, gestão de conteúdo e ecossistemas de inovação, Liszeila Martingo é docente na Fatec Rio Preto, gestora de conteúdo e mentorias da Incubadora Virtual do Centro Paula Souza e diretora de Relações Acadêmicas, Startups e Inovação. Além disso, atua como conselheira do Parque Tecnológico de São José do Rio Preto e é mentora de programas de destaque nacional, como NEXUS, Inovativa Brasil, CIETEC e ABStartups. Sua experiência conecta a academia, o empreendedorismo e o desenvolvimento de novos negócios.",
+      highlights: liszeilaSpeaker?.credentials || [
+        "Docente na Fatec Rio Preto e gestora na Incubadora Virtual do Centro Paula Souza",
+        "Conselheira do Parque Tecnológico de São José do Rio Preto",
+        "Mentora de programas nacionais: NEXUS, Inovativa Brasil, CIETEC e ABStartups",
       ],
-      actionLabel: "Acompanhar no Instagram",
-      actionUrl: "https://instagram.com/ferpatechday",
+      actionLabel: "Garantir Ingresso",
+      actionUrl: TICKET_URL,
     },
     {
       id: "coffee-break",

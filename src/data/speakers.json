@@ -3,6 +3,24 @@
   "subtitle": "Especialistas do mercado e da academia compartilhando visões práticas e o futuro da tecnologia no Ferpa Tech Day.",
   "speakers": [
     {
+      "id": "liszeila-martingo",
+      "name": "Liszeila Martingo",
+      "role": "Docente & Gestora de Inovação",
+      "company": "Fatec Rio Preto / CPS",
+      "photo": "/assets/liszeila.jpg",
+      "time": "09:20 – 10:10",
+      "stage": "Palco Principal",
+      "badge": "Palestrante Confirmada",
+      "talkTitle": "Desmistificando a Inovação: A Visão Sistêmica da Inovação e os seus componentes",
+      "talkTopic": "Na palestra, vamos explorar a visão sistêmica da inovação e os seus principais componentes, desmistificando conceitos e mostrando como aplicá-la na prática para gerar impacto real.",
+      "bio": "Com uma trajetória sólida em educação, gestão de conteúdo e ecossistemas de inovação, Liszeila Martingo é docente na Fatec Rio Preto, gestora de conteúdo e mentorias da Incubadora Virtual do Centro Paula Souza e diretora de Relações Acadêmicas, Startups e Inovação. Além disso, atua como conselheira do Parque Tecnológico de São José do Rio Preto e é mentora de programas de destaque nacional, como NEXUS, Inovativa Brasil, CIETEC e ABStartups. Sua experiência conecta a academia, o empreendedorismo e o desenvolvimento de novos negócios.",
+      "credentials": [
+        "Docente na Fatec Rio Preto e gestora na Incubadora Virtual do Centro Paula Souza",
+        "Conselheira do Parque Tecnológico de São José do Rio Preto",
+        "Mentora: NEXUS, Inovativa Brasil, CIETEC e ABStartups"
+      ]
+    },
+    {
       "id": "eustaquio-rangel",
       "name": "Eustáquio Rangel",
       "role": "Engenheiro de Software Sênior",
@@ -39,12 +57,5 @@
       ]
     }
   ],
-  "upcomingSpeakers": [
-    {
-      "id": "liszeila-abdala",
-      "name": "Liszeila Abdala",
-      "time": "09:20 – 10:10",
-      "status": "unrevealed"
-    }
-  ]
+  "upcomingSpeakers": []
 }

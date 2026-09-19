@@ -12,6 +12,15 @@
       "logo": "/assets/logo-suprasys-white.png"
     },
     {
+      "id": "fiorilli",
+      "name": "Fiorilli Software",
+      "tier": "diamante",
+      "category": "Cota Diamante",
+      "description": "Sistemas integrados para gestão pública municipal, automação e inteligência em serviços governamentais.",
+      "url": "https://fiorilli.com.br/",
+      "logo": "/assets/logo-fiorilli-texto-direita.png"
+    },
+    {
       "id": "datavale",
       "name": "Datavale",
       "tier": "prata",

@@ -52,7 +52,7 @@ export default function Partners() {
             <ScrollReveal>
               <div className="text-center">
                 <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400 font-semibold">
-                  Patrocinador Diamante
+                  {diamanteSponsors.length > 1 ? "Patrocinadores Diamante" : "Patrocinador Diamante"}
                 </h3>
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                   {diamanteSponsors.map((sponsor) => (
@@ -62,7 +62,7 @@ export default function Partners() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Conhecer ${sponsor.name}`}
-                      className="group relative flex h-40 sm:h-52 md:h-56 w-full max-w-[460px] sm:max-w-[580px] md:max-w-[620px] items-center justify-center rounded-2xl border-2 border-cyan-400/80 bg-gradient-to-b from-slate-900/90 to-slate-950/90 backdrop-blur-md px-6 sm:px-10 py-5 sm:py-6 outline-none transition-all duration-base hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
+                      className="group relative flex h-40 sm:h-52 md:h-56 w-full max-w-[460px] sm:max-w-[500px] lg:max-w-[540px] items-center justify-center rounded-2xl border-2 border-cyan-400/80 bg-gradient-to-b from-slate-900/90 to-slate-950/90 backdrop-blur-md px-6 sm:px-10 py-5 sm:py-6 outline-none transition-all duration-base hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary"
                     >
                       <span
                         aria-hidden

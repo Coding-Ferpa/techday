@@ -30,6 +30,15 @@
       "logo": "/assets/datavale-white.png"
     },
     {
+      "id": "ascont",
+      "name": "Ascont Sistemas",
+      "tier": "prata",
+      "category": "Cota Prata",
+      "description": "Soluções em tecnologia e sistemas de gestão empresarial com foco em eficiência e inovação.",
+      "url": "https://ascontsistemas.com.br/",
+      "logo": "/assets/ascont.png"
+    },
+    {
       "id": "precisao-sistemas",
       "name": "Precisão Sistemas",
       "tier": "bronze",

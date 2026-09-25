@@ -26,13 +26,16 @@ import speakersData from "@/data/speakers.json";
 import { TICKET_URL, WORKSHOP_FORM_URL } from "@/lib/constants";
 
 export default function Schedule() {
-  // Default to index 2 (Liszeila Martingo - 09:20)
-  const [activeItemIndex, setActiveItemIndex] = useState(2);
+  // Default to index 1 (Ubiratan Zakaib - 08:30)
+  const [activeItemIndex, setActiveItemIndex] = useState(1);
   const [isBioExpanded, setIsBioExpanded] = useState(false);
 
   const tabsContainerRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
+  const ubiratanSpeaker = speakersData.speakers.find(
+    (s) => s.id === "ubiratan-zakaib"
+  );
   const liszeilaSpeaker = speakersData.speakers.find(
     (s) => s.id === "liszeila-martingo"
   );
@@ -67,26 +70,34 @@ export default function Schedule() {
       actionUrl: TICKET_URL,
     },
     {
-      id: "palestra-1",
+      id: "ubiratan-zakaib",
       shortTime: "08:30",
       time: "08:30 – 09:20",
-      tabLabel: "Palestra 1",
+      tabLabel: "Ubiratan Zakaib",
       type: "talk",
-      badge: "Palestra 1 · Em Breve",
+      isConfirmed: true,
+      badge: "Palestra Magna · Confirmado",
       stage: "Palco Principal",
-      title: "Palestra Magna 1 — Abertura Técnica",
-      speaker: "Palestrante Convidado",
-      role: "Especialista em Tecnologia",
-      company: "A divulgar",
+      title:
+        ubiratanSpeaker?.talkTitle ||
+        "Do Prompt à Exfiltração: Como Proteger Aplicações e Dados Corporativos na Era dos LLMs",
+      speaker: ubiratanSpeaker?.name || "Ubiratan Zakaib do Nascimento",
+      role: ubiratanSpeaker?.role || "Professor",
+      company: ubiratanSpeaker?.company || "IFSP Campus Votuporanga",
+      photo: ubiratanSpeaker?.photo || "/assets/UbiratanZakaib.jpeg",
       description:
-        "Primeira palestra da manhã abrindo a trilha técnica no palco principal. Estamos concluindo os detalhes para anunciar em breve uma grande referência da área.",
-      highlights: [
-        "Abertura da trilha matutina de palestras",
-        "Sessão de Perguntas & Respostas ao vivo",
-        "Palco Principal",
+        ubiratanSpeaker?.talkTopic ||
+        "Uma abordagem prática sobre como identificar vulnerabilidades, prevenir riscos de exfiltração e proteger aplicações e dados corporativos na era dos LLMs.",
+      bio:
+        ubiratanSpeaker?.bio ||
+        "Mestre em Ciências Ambientais pela Universidade Brasil (2020) e Engenheiro de Computação (2004). Analista SOC, Especialista em Redes e Desenvolvimento Web, além de Licenciado em Engenharia de Computação. Docente do Instituto Federal em Votuporanga, atuando com Arquitetura de Computadores, Segurança da Informação, Linux e Nuvem. Traz expressiva experiência em P&D voltada à gestão ambiental urbana, destacando-se pela autoria do Sistema de Informações Ambientais de Fernandópolis (SisFERGEO) e publicações aplicadas em SIGWEB. Sua expertise prática conta com mais de 18 anos com servidores, segurança da informação, infraestrutura e Linux. Palestrante em diversos eventos, sendo mais relevantes as participações no Latinoware 2013, 2020 (remoto) e 2024. Entusiasta de Software Livre que busca fazer uma mistura de tecnologia e educação.",
+      highlights: ubiratanSpeaker?.credentials || [
+        "Docente do IFSP Votuporanga e Mestre em Ciências Ambientais",
+        "Mais de 18 anos de experiência com servidores, infraestrutura, segurança e Linux",
+        "Analista SOC, autor do SisFERGEO e palestrante no Latinoware (2013, 2020 e 2024)",
       ],
-      actionLabel: "Acompanhar no Instagram",
-      actionUrl: "https://instagram.com/ferpatechday",
+      actionLabel: "Garantir Ingresso",
+      actionUrl: TICKET_URL,
     },
     {
       id: "liszeila-martingo",

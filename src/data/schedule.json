@@ -13,11 +13,11 @@
     {
       "id": "2",
       "time": "08:30 – 09:20",
-      "title": "Palestra 1 — a definir",
-      "speaker": "A definir",
-      "speakerId": "palestra-1",
+      "title": "Do Prompt à Exfiltração: Como Proteger Aplicações e Dados Corporativos na Era dos LLMs",
+      "speaker": "Ubiratan Zakaib do Nascimento (IFSP Campus Votuporanga)",
+      "speakerId": "ubiratan-zakaib",
       "type": "talk",
-      "description": "Tema e palestrante serão divulgados em breve."
+      "description": "Uma abordagem prática sobre como identificar vulnerabilidades, prevenir riscos de exfiltração e proteger aplicações e dados corporativos na era dos LLMs."
     },
     {
       "id": "3",

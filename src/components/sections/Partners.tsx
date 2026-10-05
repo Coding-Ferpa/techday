@@ -122,7 +122,7 @@ export default function Partners() {
             <ScrollReveal>
               <div className="text-center">
                 <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-amber-500 font-semibold">
-                  Patrocinador Bronze
+                  Patrocinadores Bronze
                 </h3>
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                   {bronzeSponsors.map((sponsor) => (

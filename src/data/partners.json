@@ -46,6 +46,15 @@
       "description": "Tecnologia e automação com inteligência para gestão do varejo farmacêutico e comercial.",
       "url": "https://precisaosistemas.com.br/",
       "logo": "/assets/precisao-transparent.png"
+    },
+    {
+      "id": "plis",
+      "name": "Plis Telecom",
+      "tier": "bronze",
+      "category": "Cota Bronze",
+      "description": "Internet 100% fibra óptica para residências e empresas em Fernandópolis.",
+      "url": "https://plis.com.br/",
+      "logo": "/assets/plis.PNG"
     }
   ],
   "institutional": [

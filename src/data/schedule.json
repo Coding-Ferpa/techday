@@ -64,30 +64,14 @@
     },
     {
       "id": "8",
-      "time": "13:30 – 15:00",
-      "title": "Oficinas – Bloco 1",
-      "speaker": "Facilitadores selecionados",
+      "time": "13:30 – 16:30",
+      "title": "Minicursos & Oficinas Práticas",
+      "speaker": "Isabella Kobayachi · Tarsísio Xavier · Pedro Masson & Gabriel Garcia",
       "type": "workshop",
-      "description": "Primeiro bloco de workshops práticos e imersivos nos laboratórios de informática."
+      "description": "Bloco único de oficinas práticas simultâneas nos laboratórios: Machine Learning com Scikit-learn, Monitoramento com Grafana e Git/GitHub (Do caos ao commit)."
     },
     {
       "id": "9",
-      "time": "15:00 – 15:20",
-      "title": "Intervalo & Troca de Salas",
-      "speaker": "Todos",
-      "type": "break",
-      "description": "Breve intervalo e deslocamento entre os laboratórios para o segundo bloco."
-    },
-    {
-      "id": "10",
-      "time": "15:20 – 16:50",
-      "title": "Oficinas – Bloco 2",
-      "speaker": "Facilitadores selecionados",
-      "type": "workshop",
-      "description": "Segundo bloco de workshops práticos e imersivos nos laboratórios de informática."
-    },
-    {
-      "id": "11",
       "time": "17:00",
       "title": "Encerramento & Sorteios",
       "speaker": "Organização Ferpa Tech Day",

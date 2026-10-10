@@ -178,7 +178,7 @@ export default function Partners() {
                         alt={partner.name}
                         width={240}
                         height={90}
-                        className={`${partner.id === "unifef"
+                        className={`${partner.id === "unifef" || partner.id === "dog-king"
                           ? "h-12 w-12 sm:h-14 sm:w-14 rounded-xl object-cover shadow-sm"
                           : "max-h-10 sm:max-h-11 w-auto object-contain"
                           } relative z-10 transition-transform duration-base group-hover:scale-105`}

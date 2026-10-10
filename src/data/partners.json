@@ -84,6 +84,15 @@
       "description": "Experiência segura e simples para a venda oficial dos ingressos.",
       "url": "https://ticketimediato.com/product/details/ferpa-tech-day-2026.html?productId=12117",
       "logo": "/assets/ticketimediato.png"
+    },
+    {
+      "id": "dog-king",
+      "name": "Dog King",
+      "type": "partner",
+      "category": "Apoiador Oficial",
+      "description": "Apoiador oficial do Ferpa Tech Day 2026.",
+      "url": "https://www.instagram.com/dogking.fernandopolis/",
+      "logo": "/assets/dogking.jpg"
     }
   ],
   "plans": [

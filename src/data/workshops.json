@@ -1,22 +1,78 @@
 {
-  "label": "Submissão aberta",
-  "title": "Compartilhe seu conhecimento",
-  "intro": "Proponha um workshop prático e faça parte da programação oficial do Ferpa Tech Day 2026.",
-  "topics": "Desenvolvimento, IA, dados, cloud, segurança, carreira, design, open source e temas relacionados.",
-  "cta": "As vagas são limitadas.",
-  "buttonLabel": "Submeter proposta",
-  "highlights": [
+  "label": "Oficinas Práticas",
+  "title": "Minicursos & Workshops Confirmados",
+  "subtitle": "Atividades práticas e imersivas nos laboratórios de informática da Unifef. Coloque a mão na massa com referências da comunidade tech.",
+  "workshops": [
     {
-      "title": "Duração",
-      "description": "Até 3h, incluindo intervalo"
+      "id": "machine-learning-scikit-learn",
+      "title": "Introdução a Machine Learning com Scikit-learn",
+      "type": "Minicurso",
+      "duration": "2 a 3 horas",
+      "level": "Iniciante a Intermediário",
+      "targetAudience": "Estudantes de TI que possuem noção básica de lógica de programação",
+      "description": "Apresentação dos conceitos fundamentais de Machine Learning, dos principais tipos de modelos, das métricas de avaliação e das técnicas de otimização. Durante o curso, será desenvolvido um caso de estudo fictício para a criação de um modelo de Machine Learning e a análise de seu desempenho.",
+      "instructors": [
+        {
+          "name": "Isabella Miki Kobayachi",
+          "role": "Facilitadora",
+          "photo": "/assets/Isabela-Kobayachi.jpeg"
+        }
+      ],
+      "tags": ["Machine Learning", "Scikit-learn", "Python", "Data Science"],
+      "highlights": [
+        "Conceitos fundamentais de Machine Learning e principais tipos de modelos preditivos",
+        "Métricas de avaliação de desempenho e técnicas de otimização de modelos",
+        "Desenvolvimento prático de um estudo de caso fictício com análise completa de resultados"
+      ]
     },
     {
-      "title": "Data e local",
-      "description": "24 de outubro · UNIFEF"
+      "id": "monitoramento-grafana",
+      "title": "Monitoramento com Grafana",
+      "type": "Minicurso Prático",
+      "duration": "1h30 a 2 horas",
+      "level": "Intermediário",
+      "targetAudience": "Estudantes e profissionais de TI interessados em DevOps e observabilidade",
+      "description": "Apresentação e demonstração de uma stack completa de monitoramento de máquinas virtuais e containers utilizando Docker. O Grafana se conecta ao Prometheus para exibir métricas de host e contêineres e ao Loki para consulta e análise de logs em tempo real.",
+      "instructors": [
+        {
+          "name": "Tarsísio Xavier",
+          "role": "Facilitador",
+          "photo": "/assets/tarcisio-xavier.jpeg"
+        }
+      ],
+      "tags": ["Grafana", "Prometheus", "Loki", "Docker", "DevOps"],
+      "highlights": [
+        "Criação de uma stack completa de monitoramento com Docker e Docker Compose",
+        "Conexão do Grafana com Prometheus para métricas de host e contêineres",
+        "Centralização e consulta ágil de logs de aplicações utilizando Grafana Loki"
+      ]
     },
     {
-      "title": "Facilitadores",
-      "description": "Ingresso gratuito e divulgação"
+      "id": "do-caos-ao-commit",
+      "title": "Do caos ao commit",
+      "type": "Minicurso",
+      "duration": "1 a 2 horas",
+      "level": "Todos os níveis",
+      "targetAudience": "Todos os estudantes da área de tecnologia, de todos os níveis",
+      "description": "Aborda a ferramenta Git e o GitHub de maneira simples e descomplicada, mostrando os comandos mais úteis do dia a dia e explicando os pontos que normalmente geram mais dúvidas entre os alunos durante o aprendizado.",
+      "instructors": [
+        {
+          "name": "Pedro Masson",
+          "role": "Facilitador",
+          "photo": "/assets/pedro-masson.jpeg"
+        },
+        {
+          "name": "Gabriel Garcia",
+          "role": "Facilitador",
+          "photo": "/assets/gabriel-garcia.jpeg"
+        }
+      ],
+      "tags": ["Git", "GitHub", "Versionamento", "Workflow Ágil"],
+      "highlights": [
+        "Fundamentos de versionamento de código e comandos essenciais para a rotina",
+        "Boas práticas de colaboração, commits claros e organização no GitHub",
+        "Desmistificação dos pontos que mais geram dúvidas e erros no aprendizado"
+      ]
     }
   ]
 }

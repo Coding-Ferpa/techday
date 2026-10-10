@@ -89,7 +89,7 @@ export default function Workshops() {
                             {workshop.instructors.map((inst, idx) => (
                               <div
                                 key={idx}
-                                className="relative h-13 w-13 sm:h-14 sm:w-14 overflow-hidden rounded-xl border-2 border-[#161616] ring-2 ring-accent/40 bg-[#1a1a1a] shadow-md transition-transform group-hover:scale-105"
+                                className="relative h-12 w-12 sm:h-14 sm:w-14 overflow-hidden rounded-xl border-2 border-[#161616] ring-2 ring-accent/40 bg-[#1a1a1a] shadow-md transition-transform group-hover:scale-105 aspect-square shrink-0"
                               >
                                 <Image
                                   src={inst.photo}
@@ -112,7 +112,7 @@ export default function Workshops() {
                         </div>
                       ) : (
                         <div className="flex items-center gap-3">
-                          <div className="relative h-13 w-13 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-xl border-2 border-accent/40 shadow-glow bg-[#1a1a1a]">
+                          <div className="relative h-12 w-12 sm:h-14 sm:w-14 shrink-0 overflow-hidden rounded-xl border-2 border-accent/40 shadow-glow bg-[#1a1a1a] aspect-square">
                             <Image
                               src={workshop.instructors[0].photo}
                               alt={`Foto de ${workshop.instructors[0].name}`}

@@ -485,7 +485,7 @@ export default function Schedule() {
                     }`}
                   >
                     <span
-                      className={`flex h-4.5 w-4.5 sm:h-5 sm:w-5 items-center justify-center rounded-md font-mono text-[10px] sm:text-[11px] font-bold ${
+                      className={`flex h-5 w-5 items-center justify-center rounded-md font-mono text-[10px] sm:text-[11px] font-bold ${
                         isActive
                           ? "bg-accent text-black"
                           : "bg-white/5 text-text-muted"
@@ -561,7 +561,7 @@ export default function Schedule() {
                               {w.instructors.map((inst, i) => (
                                 <div
                                   key={i}
-                                  className="relative h-5 w-5 rounded-full overflow-hidden border border-border"
+                                  className="relative h-5 w-5 rounded-full overflow-hidden border border-border aspect-square shrink-0"
                                   title={inst.name}
                                 >
                                   <Image
@@ -616,7 +616,7 @@ export default function Schedule() {
                                   {activeWorkshop.instructors.map((inst, i) => (
                                     <div
                                       key={i}
-                                      className="relative h-13 w-13 sm:h-15 sm:w-15 rounded-xl border-2 border-accent/40 shadow-glow overflow-hidden bg-[#1a1a1a] shrink-0"
+                                      className="relative h-12 w-12 sm:h-14 sm:w-14 rounded-xl border-2 border-accent/40 shadow-glow overflow-hidden bg-[#1a1a1a] shrink-0 aspect-square"
                                       title={inst.name}
                                     >
                                       <Image
@@ -630,7 +630,7 @@ export default function Schedule() {
                                   ))}
                                 </div>
                               ) : (
-                                <div className="relative h-13 w-13 sm:h-15 sm:w-15 shrink-0 overflow-hidden rounded-xl border-2 border-accent/40 shadow-glow bg-[#1a1a1a]">
+                                <div className="relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden rounded-xl border-2 border-accent/40 shadow-glow bg-[#1a1a1a] aspect-square">
                                   <Image
                                     src={activeWorkshop.instructors[0].photo}
                                     alt={activeWorkshop.instructors[0].name}
@@ -791,7 +791,7 @@ export default function Schedule() {
                             {currentItem.photos.map((src, idx) => (
                               <div
                                 key={idx}
-                                className="relative h-13 w-13 sm:h-15 sm:w-15 rounded-xl border-2 border-accent/40 shadow-glow overflow-hidden bg-[#1a1a1a] shrink-0"
+                                className="relative h-12 w-12 sm:h-14 sm:w-14 rounded-xl border-2 border-accent/40 shadow-glow overflow-hidden bg-[#1a1a1a] shrink-0 aspect-square"
                               >
                                 <Image
                                   src={src}
@@ -804,7 +804,7 @@ export default function Schedule() {
                             ))}
                           </div>
                         ) : currentItem.photo ? (
-                          <div className="relative h-14 w-14 sm:h-16 sm:w-16 md:h-18 md:w-18 shrink-0 overflow-hidden rounded-xl border-2 border-accent/40 shadow-glow bg-[#1a1a1a]">
+                          <div className="relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden rounded-xl border-2 border-accent/40 shadow-glow bg-[#1a1a1a] aspect-square">
                             <Image
                               src={currentItem.photo}
                               alt={`Foto de ${currentItem.speaker}`}
@@ -815,7 +815,7 @@ export default function Schedule() {
                             />
                           </div>
                         ) : (
-                          <div className="flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 shrink-0 items-center justify-center rounded-xl border border-[#262626] bg-[rgba(255,255,255,0.03)] text-text-muted">
+                          <div className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 aspect-square items-center justify-center rounded-xl border border-[#262626] bg-[rgba(255,255,255,0.03)] text-text-muted">
                             <FontAwesomeIcon
                               icon={getItemIcon(currentItem.type)}
                               className="h-5 w-5 sm:h-6 sm:w-6 text-accent/60"
